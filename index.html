@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Techni Fermetures — Menuiserie & fermetures Mulhouse (68) | Fenêtres, volets, portails depuis 1999</title>
+<meta name="description" content="Menuisier-fermetures à Mulhouse depuis 1999. Fenêtres PVC/alu, volets, stores BSO, portails, portes de garage et industrielles. SAV & dépannage en urgence. 5/5 Google.">
+<meta name="theme-color" content="#0F1419">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/">
+<meta property="og:title" content="Techni Fermetures — Menuisier-fermetures à Mulhouse depuis 1999">
+<meta property="og:description" content="Vos fenêtres, vos volets, vos portails — confiés à la même équipe depuis 27 ans. Particuliers & professionnels. SAV et dépannage en urgence.">
+<meta property="og:image" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/img/2021-11-24%20%283%29.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Techni Fermetures — Menuisier-fermetures à Mulhouse depuis 1999">
+<meta name="twitter:description" content="Vos fenêtres, vos volets, vos portails — confiés à la même équipe depuis 27 ans.">
+<meta name="twitter:image" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/img/2021-11-24%20%283%29.webp">
+
+<!-- Favicon SVG monogramme TF couleurs logo -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F1419'/><text x='6' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23C00000'>T</text><text x='15' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23FAFAF7'>F</text></svg>">
+
+<!-- Tailwind + Fonts -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0F1419',
+        inksoft: '#1A2128',
+        accent: '#C00000',
+        accentdark: '#9A0000',
+        teal: '#2D5547',
+        bone: '#FAFAF7',
+        stone: '#F4F1EA',
+        slate2: '#5A6470',
+      },
+      fontFamily: {
+        display: ['Manrope', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'soft': '0 1px 2px rgba(15,20,25,.04), 0 8px 24px rgba(15,20,25,.06)',
+        'lift': '0 8px 16px rgba(15,20,25,.06), 0 24px 48px rgba(15,20,25,.10)',
+      }
+    }
+  }
+}
+</script>
+
+<style>
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; color: #0F1419; background: #FAFAF7; }
+h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.02em; }
+
+/* Schroll-driven fade-in */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Header transition */
+.nav { transition: background-color .35s ease, box-shadow .35s ease, border-color .35s ease; }
+.nav-scrolled { background: rgba(250,250,247,.92); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid rgba(15,20,25,.08); }
+.nav-scrolled .nav-link { color: #0F1419; }
+.nav-scrolled .nav-logo-mark { filter: none; }
+
+/* Menu déroulant "Nos services" (mêmes règles que assets/css/site.css) :
+   - le déclencheur s'étire sur toute la hauteur du header (zone de survol large)
+   - délai de fermeture (.25s) pour tolérer un passage hors du menu */
+.services-trigger { align-self: stretch; display: inline-flex; align-items: center; }
+.services-menu { transition: opacity .2s ease, transform .2s ease, visibility .2s; transition-delay: .25s; }
+.services-trigger:hover .services-menu,
+.services-trigger:focus-within .services-menu,
+.services-menu:hover { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; transition-delay: 0s; }
+
+/* Burger moderne (mêmes règles que assets/css/site.css) :
+   2 traits, le bas plus court ; repasse en ink quand la nav devient claire au scroll */
+.nav-burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+.nav-burger .burger-box { position: relative; display: block; width: 26px; height: 14px; }
+.nav-burger .burger-line { position: absolute; right: 0; height: 2px; border-radius: 2px; background: currentColor; transition: width .3s ease; }
+.nav-burger .burger-line:first-child { top: 0; width: 26px; }
+.nav-burger .burger-line:last-child { top: 12px; width: 17px; }
+.nav-burger:hover .burger-line:last-child, .nav-burger:focus-visible .burger-line:last-child { width: 26px; }
+.nav-scrolled .nav-burger { color: #0F1419; }
+
+/* Menu off-canvas (mobile / tablette) — mêmes règles que assets/css/site.css.
+   Fermé = display:none (classe Tailwind `hidden`, gérée par le JS) — pas d'état intermédiaire possible. */
+.offcanvas-backdrop { opacity: 0; transition: opacity .35s ease; }
+.offcanvas.is-open .offcanvas-backdrop { opacity: 1; }
+.offcanvas-panel { transform: translateX(100%); transition: transform .45s cubic-bezier(.22,.61,.36,1); }
+.offcanvas.is-open .offcanvas-panel { transform: translateX(0); }
+.offcanvas .oc-item { opacity: 0; transform: translateX(18px); transition: opacity .3s ease, transform .3s ease; }
+.offcanvas.is-open .oc-item { opacity: 1; transform: none; transition-delay: calc(.12s + .035s * var(--i, 0)); }
+
+/* Scrollbar rouge dans la zone de liens du menu off-canvas (indique qu'on peut descendre) */
+.offcanvas-panel nav { scrollbar-width: thin; scrollbar-color: #C00000 rgba(15,20,25,.07); }
+.offcanvas-panel nav::-webkit-scrollbar { width: 6px; }
+.offcanvas-panel nav::-webkit-scrollbar-track { background: rgba(15,20,25,.07); border-radius: 3px; }
+.offcanvas-panel nav::-webkit-scrollbar-thumb { background: #C00000; border-radius: 3px; }
+.offcanvas-panel nav::-webkit-scrollbar-thumb:hover { background: #9A0000; }
+
+/* Accent underline animation */
+.accent-underline { position: relative; }
+.accent-underline::after {
+  content: ""; position: absolute; left: 0; bottom: -6px; width: 56px; height: 3px;
+  background: linear-gradient(90deg, #C00000 0%, #C00000 60%, transparent 100%);
+  border-radius: 2px;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(15,20,25,.45) 0%, rgba(15,20,25,.25) 35%, rgba(15,20,25,.75) 100%),
+    linear-gradient(90deg, rgba(15,20,25,.55) 0%, rgba(15,20,25,.15) 60%, rgba(15,20,25,.15) 100%);
+}
+
+/* Service card */
+.svc-card { transition: transform .5s cubic-bezier(.2,.6,.2,1), box-shadow .5s ease, border-color .5s ease; }
+.svc-card:hover { transform: translateY(-6px); box-shadow: 0 8px 16px rgba(15,20,25,.05), 0 32px 56px rgba(15,20,25,.14); border-color: rgba(192,0,0,.4); }
+.svc-card .svc-img { transition: transform 1.2s cubic-bezier(.2,.6,.2,1); }
+.svc-card:hover .svc-img { transform: scale(1.06); }
+
+/* Timeline */
+.tl-dot { position: relative; }
+.tl-dot::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0, rgba(192,0,0,.3) 12%, rgba(192,0,0,.3) 88%, transparent 100%);
+}
+@media (max-width:767px) { .tl-dot::before { left: 22px; } }
+
+/* Gallery */
+.g-tile { transition: transform .5s ease; overflow: hidden; }
+.g-tile img { transition: transform .8s cubic-bezier(.2,.6,.2,1), filter .5s; }
+.g-tile:hover img { transform: scale(1.06); filter: brightness(1.04); }
+.g-tile .g-label { transform: translateY(8px); opacity: 0; transition: all .4s ease; }
+.g-tile:hover .g-label { transform: translateY(0); opacity: 1; }
+
+/* Quote serif used only for the Pietro pull-quote */
+.quote-serif {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.015em;
+}
+
+/* Sticky mobile CTA */
+.sticky-cta { box-shadow: 0 -8px 24px rgba(15,20,25,.18); }
+
+/* Lightbox */
+.lb { transition: opacity .25s ease; }
+.lb.hidden { display: none; }
+
+/* Counter highlight */
+.kpi { font-variant-numeric: tabular-nums; }
+
+/* Filter pills */
+.pill { transition: all .25s ease; }
+.pill.is-active { background: #0F1419; color: #FAFAF7; border-color: #0F1419; }
+
+/* Window-open hover micro animation */
+.window-hover { perspective: 800px; }
+.window-hover .window-pane { transition: transform .6s cubic-bezier(.2,.6,.2,1); transform-origin: left center; }
+.window-hover:hover .window-pane { transform: rotateY(-14deg); }
+
+/* Subtle texture for stone bg */
+.stone-grain {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(192,0,0,.04) 0%, transparent 30%),
+    radial-gradient(circle at 88% 76%, rgba(45,85,71,.04) 0%, transparent 32%);
+}
+</style>
+
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.techni-fermetures.com/#business",
+  "name": "Techni Fermetures",
+  "alternateName": "TECHNI FERMETURES",
+  "description": "Menuisier-fermetures à Mulhouse depuis 1999. Pose et SAV de fenêtres, volets, stores BSO, portes d'entrée, portails, portes de garage et portes industrielles pour particuliers et professionnels.",
+  "image": "https://template-site-skypeo-two.vercel.app/techni-fermetures/img/TechnifermLogo.webp",
+  "logo": "https://template-site-skypeo-two.vercel.app/techni-fermetures/img/TechnifermLogo.webp",
+  "url": "https://www.techni-fermetures.com/",
+  "telephone": "+33389641484",
+  "email": "techni.fermetures@orange.fr",
+  "foundingDate": "1999",
+  "vatID": "FR33415149822",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2 Rue des Flandres – Village Artisanal Drouot",
+    "addressLocality": "Mulhouse",
+    "postalCode": "68100",
+    "addressCountry": "FR"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Mulhouse" },
+    { "@type": "AdministrativeArea", "name": "Haut-Rhin" }
+  ],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "08:15", "closes": "12:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "13:30", "closes": "17:15" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:15", "closes": "12:15" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "reviewCount": "8"
+  }
+}
+</script>
+</head>
+<body class="antialiased">
+
+<!-- ============================================================ -->
+<!-- HEADER                                                       -->
+<!-- ============================================================ -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[72px] md:h-[84px]">
+    <a href="#hero" class="flex items-center gap-3">
+      <img src="img/TechnifermLogo.webp" alt="Techni Fermetures Mulhouse" class="nav-logo-mark h-10 md:h-12 w-auto drop-shadow-lg" />
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="nav-link text-white hover:text-accent transition">Accueil</a>
+      <div class="services-trigger relative">
+        <button class="nav-link text-white hover:text-accent transition inline-flex items-center gap-1.5">
+          Nos services
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="services-menu absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[320px] opacity-0 invisible translate-y-1 pointer-events-none">
+          <div class="bg-white border border-ink/10 rounded-2xl shadow-lift p-2 grid grid-cols-1 gap-0.5">
+            <a href="fenetres.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Fenêtres</a>
+            <a href="volets-roulants.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Volets roulants</a>
+            <a href="portes-d-entree.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes d'entrée</a>
+            <a href="stores-bso.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Stores & BSO</a>
+            <a href="portails.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portails</a>
+            <a href="portes-de-garage.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes de garage</a>
+            <a href="portes-industrielles.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes industrielles</a>
+            <a href="motorisations.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Motorisations</a>
+            <a href="sav-depannage.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">SAV & Dépannage</a>
+          </div>
+        </div>
+      </div>
+      <a href="notre-entreprise.html" class="nav-link text-white hover:text-accent transition">Notre entreprise</a>
+      <a href="realisations.html" class="nav-link text-white hover:text-accent transition">Réalisations</a>
+      <a href="contact.html" class="nav-link text-white hover:text-accent transition">Contact</a>
+    </nav>
+    <a href="tel:+33389641484" class="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accentdark text-white px-5 py-2.5 rounded-full font-semibold text-sm transition">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+      03 89 64 14 84
+    </a>
+    <button id="menuBtn" class="nav-burger lg:hidden text-white" aria-label="Menu">
+      <span class="burger-box"><span class="burger-line"></span><span class="burger-line"></span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Menu off-canvas (mobile / tablette) -->
+  <div id="mobileMenu" class="offcanvas lg:hidden hidden fixed inset-0 z-[70]">
+    <div class="offcanvas-backdrop absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
+    <aside class="offcanvas-panel absolute top-0 right-0 h-full w-[86%] max-w-sm bg-bone shadow-2xl flex flex-col" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="flex items-center justify-between pl-6 pr-5 h-[72px] border-b border-ink/10 flex-shrink-0">
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-9 w-auto" />
+        <button class="offcanvas-close w-10 h-10 rounded-full border border-ink/15 flex items-center justify-center text-ink hover:text-accent hover:border-accent/50 transition" aria-label="Fermer le menu"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-6 py-5">
+        <a href="index.html" class="oc-item flex items-center justify-between py-3 border-b border-ink/5 font-display font-bold text-lg text-accent transition" style="--i:0">Accueil</a>
+        <div class="oc-item pt-5 pb-1.5 text-[11px] uppercase tracking-[0.18em] text-accent font-bold" style="--i:1">Nos services</div>
+        <a href="fenetres.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:2">Fenêtres<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="volets-roulants.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:3">Volets roulants<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-d-entree.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:4">Portes d'entrée<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="stores-bso.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:5">Stores & BSO<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portails.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:6">Portails<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-de-garage.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:7">Portes de garage<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-industrielles.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:8">Portes industrielles<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="motorisations.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:9">Motorisations<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="sav-depannage.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:10">SAV & Dépannage<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="notre-entreprise.html" class="oc-item flex items-center justify-between py-3 mt-3 border-t border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:11">Notre entreprise</a>
+        <a href="realisations.html" class="oc-item flex items-center justify-between py-3 border-t border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:12">Réalisations</a>
+        <a href="contact.html" class="oc-item flex items-center justify-between py-3 border-t border-b border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:13">Contact</a>
+      </nav>
+      <div class="oc-item px-6 py-5 border-t border-ink/10 flex-shrink-0 bg-stone" style="--i:14">
+        <a href="tel:+33389641484" class="flex items-center justify-center gap-2.5 bg-accent hover:bg-accentdark text-white rounded-full px-5 py-3.5 font-semibold transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>03 89 64 14 84</a>
+        <p class="mt-3 text-xs text-slate2 text-center leading-relaxed">Lun–jeu : 08h15–12h15 / 13h30–17h15 · Ven : 08h15–12h15</p>
+      </div>
+    </aside>
+  </div>
+<!-- ============================================================ -->
+<!-- 1. HERO                                                      -->
+<!-- ============================================================ -->
+<section id="hero" class="relative min-h-[100svh] flex items-center overflow-hidden bg-ink">
+  <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+    <source src="hero-animation.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay absolute inset-0"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-32 md:py-40 w-full">
+    <div class="max-w-3xl">
+      <!-- Pre-header -->
+      <div class="inline-flex items-center gap-3 mb-7 text-white/80 text-xs md:text-sm tracking-[0.18em] uppercase font-semibold">
+        <span class="w-8 h-px bg-accent"></span>
+        <span>Depuis 1999 · Menuisier-fermetures à Mulhouse</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-white font-display font-extrabold text-[2rem] leading-[1.1] sm:text-4xl md:text-5xl lg:text-[3.5rem] drop-shadow-2xl">
+        Vos fenêtres, vos volets, vos portails —<br class="hidden sm:block">
+        <span class="text-white">confiés à la même équipe</span>
+        <span class="text-accent">depuis 27 ans.</span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="mt-7 text-white/90 text-lg md:text-xl max-w-2xl leading-relaxed">
+        Techni Fermetures, votre menuisier-fermetures à Mulhouse. Particuliers et professionnels — du devis au dépannage, par les mêmes mains.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="tel:+33389641484" class="group inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentdark text-white px-7 py-4 rounded-full font-semibold text-base md:text-lg transition shadow-2xl shadow-accent/30">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          <span>03 89 64 14 84</span>
+          <span class="hidden sm:inline text-white/80 text-sm font-normal border-l border-white/30 pl-3">Devis gratuit</span>
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white text-white bg-white/5 hover:bg-white/15 backdrop-blur-sm px-7 py-4 rounded-full font-semibold text-base md:text-lg transition">
+          Demander un devis
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Badges -->
+      <div class="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-white/85 text-sm">
+        <div class="inline-flex items-center gap-2">
+          <span class="text-yellow-400 text-base">★★★★★</span>
+          <span class="font-medium">5/5 sur Google</span>
+        </div>
+        <div class="inline-flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-accent"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span class="font-medium">Depuis 1999 · 27 ans</span>
+        </div>
+        <div class="inline-flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-accent"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span class="font-medium">Dépannage en urgence</span>
+        </div>
+        <div class="inline-flex items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-accent"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="font-medium">Particuliers & professionnels</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll indicator -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-xs flex flex-col items-center gap-2 hidden md:flex">
+    <span class="uppercase tracking-[0.2em]">Scroll</span>
+    <div class="w-px h-8 bg-white/40 animate-pulse"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 2. SERVICES — 4 PILIERS                                      -->
+<!-- ============================================================ -->
+<section id="services" class="relative py-24 md:py-32 bg-bone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Nos prestations</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-ink leading-tight">
+        En neuf ou en rénovation, <span class="text-slate2 font-semibold">adoptez des menuiseries de qualité pour protéger votre habitat.</span>
+      </h2>
+      <p class="mt-6 text-slate2 text-lg leading-relaxed max-w-2xl">
+        Vous êtes à la recherche d'un professionnel pour prendre en charge vos travaux de menuiserie intérieure ou de menuiserie extérieure ? Créée en 1999, TECHNI FERMETURES vous offre des produits de qualité et sur mesure combinés au savoir-faire de professionnels de la menuiserie.
+      </p>
+    </div>
+
+    <div class="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <!-- PILIER 1 -->
+      <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
+        <div class="aspect-[16/10] overflow-hidden bg-stone">
+          <img src="img/TechnifermFenetre.png" alt="Baie vitrée alu installée par Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover" />
+        </div>
+        <div class="p-7 md:p-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-accent text-xs font-bold tracking-[0.18em] uppercase">01</span>
+            <span class="h-px flex-1 bg-ink/10"></span>
+          </div>
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-ink">Fenêtres & portes d'entrée</h3>
+          <p class="mt-3 text-slate2 leading-relaxed">Notre entreprise de menuiserie est à votre service pour l'installation de vos menuiseries intérieures sur mesure&nbsp;: fenêtres, portes d'entrée, volets et stores.</p>
+          <ul class="mt-6 space-y-2 text-sm text-ink/80">
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Fenêtres PVC et aluminium sur mesure</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Portes d'entrée PVC, aluminium, sécurisées</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Réglage, entretien, remplacement de vitrage</span></li>
+          </ul>
+          <div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+            <a href="fenetres.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Fenêtres<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="portes-d-entree.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Portes d'entrée<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PILIER 2 -->
+      <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
+        <div class="aspect-[16/10] overflow-hidden bg-stone">
+          <img src="img/20200806_170427-1920w.webp" alt="Stores BSO brise-soleil orientables Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover" />
+        </div>
+        <div class="p-7 md:p-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-accent text-xs font-bold tracking-[0.18em] uppercase">02</span>
+            <span class="h-px flex-1 bg-ink/10"></span>
+          </div>
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-ink">Volets & protections solaires</h3>
+          <p class="mt-3 text-slate2 leading-relaxed">Que ce soit pour la pose ou l'installation de fenêtres, de volets roulants, de stores ou encore de portes d'entrée&nbsp;: notre entreprise de menuiserie répond présent.</p>
+          <ul class="mt-6 space-y-2 text-sm text-ink/80">
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Volets roulants manuels et motorisés</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Stores et BSO brise-soleil orientables</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Motorisation de l'existant, dépannage moteur</span></li>
+          </ul>
+          <div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+            <a href="volets-roulants.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Volets roulants<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="stores-bso.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Stores & BSO<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PILIER 3 -->
+      <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
+        <div class="aspect-[16/10] overflow-hidden bg-stone">
+          <img src="img/TechnifermPortail.png" alt="Portail design installé par Techni Fermetures Mulhouse" loading="lazy" class="svc-img w-full h-full object-cover" />
+        </div>
+        <div class="p-7 md:p-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-accent text-xs font-bold tracking-[0.18em] uppercase">03</span>
+            <span class="h-px flex-1 bg-ink/10"></span>
+          </div>
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-ink">Portails & portes de garage</h3>
+          <p class="mt-3 text-slate2 leading-relaxed">Porte de garage, portail, porte industrielle... TECHNI FERMETURES vous accompagne dans le choix de vos menuiseries extérieures.</p>
+          <ul class="mt-6 space-y-2 text-sm text-ink/80">
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Portails battants et coulissants sur mesure</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Portes de garage sectionnelles</span></li>
+            <li class="flex gap-2.5"><span class="text-accent mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Motorisation neuve ou sur installation existante</span></li>
+          </ul>
+          <div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+            <a href="portails.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Portails<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="portes-de-garage.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Portes de garage<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="motorisations.html" class="inline-flex items-center gap-1.5 text-ink hover:text-accent transition">Motorisations<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PILIER 4 -->
+      <article class="svc-card group relative bg-ink text-bone border border-ink rounded-3xl overflow-hidden shadow-soft reveal">
+        <div class="aspect-[16/10] overflow-hidden bg-ink/40 relative">
+          <img src="img/TechnifermPorteIndustrielle.png" alt="Porte industrielle sectionnelle Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover opacity-90" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+        </div>
+        <div class="p-7 md:p-10">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-accent text-xs font-bold tracking-[0.18em] uppercase">04 · B2B</span>
+            <span class="h-px flex-1 bg-white/20"></span>
+          </div>
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-bone">Solutions professionnelles</h3>
+          <p class="mt-3 text-bone/70 leading-relaxed">Notre équipe de professionnels intervient aussi bien pour les particuliers en procédant à l'installation d'une porte de garage ou d'un portail, que pour les entreprises en réalisant la pose d'une porte industrielle sur mesure.</p>
+          <ul class="mt-6 space-y-2 text-sm text-bone/85">
+            <li class="flex gap-2.5"><span class="mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Portes industrielles sur mesure</span></li>
+            <li class="flex gap-2.5"><span class="mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Rideaux métalliques, sectionnelles rapides</span></li>
+            <li class="flex gap-2.5"><span class="mt-1.5 inline-block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span><span>Maintenance et dépannage prioritaires</span></li>
+          </ul>
+          <div class="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+            <a href="portes-industrielles.html" class="inline-flex items-center gap-1.5 text-bone hover:text-accent transition">Portes industrielles<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+            <a href="sav-depannage.html" class="inline-flex items-center gap-1.5 text-bone hover:text-accent transition">SAV & dépannage<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- SAV bandeau transverse -->
+    <div class="mt-10 md:mt-12 bg-stone border border-ink/8 rounded-3xl p-7 md:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10 reveal">
+      <div class="flex-shrink-0">
+        <div class="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-accent/10 border border-accent/30 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+      </div>
+      <div class="flex-1">
+        <h4 class="font-display font-bold text-xl md:text-2xl text-ink">SAV & dépannage en urgence</h4>
+        <p class="mt-2 text-slate2 leading-relaxed">Pour vous offrir un service complet et sur mesure, votre entreprise de menuiserie reste à votre service pour effectuer tout type de dépannage en menuiserie.</p>
+      </div>
+      <a href="tel:+33389641484" class="md:flex-shrink-0 inline-flex items-center justify-center gap-2 bg-ink hover:bg-inksoft text-bone px-6 py-3.5 rounded-full font-semibold text-sm transition whitespace-nowrap">
+        Appeler le dépannage
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 3. NOTRE MÉTHODE — TIMELINE 4 ÉTAPES                         -->
+<!-- ============================================================ -->
+<section id="methode" class="relative py-24 md:py-32 bg-ink text-bone overflow-hidden">
+  <!-- bg subtle pattern -->
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #FAFAF7 1px, transparent 0); background-size: 28px 28px;"></div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative">
+    <div class="max-w-3xl reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Notre méthode</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-bone leading-tight">
+        Avant de poser quoi que ce soit, <span class="text-bone/60">on vient mesurer chez vous.</span>
+      </h2>
+      <p class="mt-6 text-bone/70 text-lg leading-relaxed max-w-2xl">
+        Pas de devis bricolé au téléphone, pas de prix au m² sur catalogue. Chaque projet commence par une visite, des mesures précises et un devis détaillé&nbsp;: vous savez exactement ce que vous payez avant qu'on touche à votre maçonnerie.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 relative">
+      <!-- Step 1 -->
+      <div class="reveal relative">
+        <div class="flex items-center gap-4 md:block">
+          <div class="w-14 h-14 rounded-2xl bg-accent text-bone flex items-center justify-center font-display font-extrabold text-xl flex-shrink-0">01</div>
+          <h3 class="md:mt-6 font-display font-bold text-xl md:text-2xl">Premier contact</h3>
+        </div>
+        <p class="mt-3 md:mt-4 text-bone/70 leading-relaxed">Prise de contact téléphonique ou en agence, écoute de votre projet, définition de vos besoins et de votre budget.</p>
+      </div>
+      <!-- arrow -->
+      <div class="hidden md:block absolute" style="top:28px; left:25%; transform:translateX(-50%);">
+        <svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7H38M30 1L38 7L30 13" stroke="#C00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="reveal relative">
+        <div class="flex items-center gap-4 md:block">
+          <div class="w-14 h-14 rounded-2xl bg-bone/10 border border-bone/20 text-bone flex items-center justify-center font-display font-extrabold text-xl flex-shrink-0">02</div>
+          <h3 class="md:mt-6 font-display font-bold text-xl md:text-2xl">Prise de mesure</h3>
+        </div>
+        <p class="mt-3 md:mt-4 text-bone/70 leading-relaxed">Un déplacement chez vous pour relever les mesures et identifier toutes les contraintes techniques avant de valider votre projet.</p>
+      </div>
+      <div class="hidden md:block absolute" style="top:28px; left:50%; transform:translateX(-50%);">
+        <svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7H38M30 1L38 7L30 13" stroke="#C00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="reveal relative">
+        <div class="flex items-center gap-4 md:block">
+          <div class="w-14 h-14 rounded-2xl bg-bone/10 border border-bone/20 text-bone flex items-center justify-center font-display font-extrabold text-xl flex-shrink-0">03</div>
+          <h3 class="md:mt-6 font-display font-bold text-xl md:text-2xl">Proposition de devis</h3>
+        </div>
+        <p class="mt-3 md:mt-4 text-bone/70 leading-relaxed">Un devis détaillé, plusieurs options chiffrées, et toutes vos questions traitées avant d'engager quoi que ce soit.</p>
+      </div>
+      <div class="hidden md:block absolute" style="top:28px; left:75%; transform:translateX(-50%);">
+        <svg width="40" height="14" viewBox="0 0 40 14" fill="none"><path d="M0 7H38M30 1L38 7L30 13" stroke="#C00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="reveal relative">
+        <div class="flex items-center gap-4 md:block">
+          <div class="w-14 h-14 rounded-2xl bg-bone/10 border border-bone/20 text-bone flex items-center justify-center font-display font-extrabold text-xl flex-shrink-0">04</div>
+          <h3 class="md:mt-6 font-display font-bold text-xl md:text-2xl">Démarrage</h3>
+        </div>
+        <p class="mt-3 md:mt-4 text-bone/70 leading-relaxed">Notre équipe intervient chez vous pour une pose soignée, dans le respect des délais annoncés et des règles de l'art.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 4. POURQUOI NOUS — KPIs + ENGAGEMENTS                        -->
+<!-- ============================================================ -->
+<section id="pourquoi" class="relative py-24 md:py-32 bg-bone stone-grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+
+    <!-- KPI row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-20 md:mb-28">
+      <div class="reveal">
+        <div class="kpi font-display font-extrabold text-5xl md:text-7xl text-ink leading-none"><span data-counter="27">0</span></div>
+        <div class="mt-3 text-sm md:text-base text-slate2 font-medium">années d'expérience<br>depuis 1999</div>
+      </div>
+      <div class="reveal">
+        <div class="kpi font-display font-extrabold text-5xl md:text-7xl text-accent leading-none"><span data-counter="8">0</span></div>
+        <div class="mt-3 text-sm md:text-base text-slate2 font-medium">gammes de produits<br>maîtrisées</div>
+      </div>
+      <div class="reveal">
+        <div class="kpi font-display font-extrabold text-5xl md:text-7xl text-ink leading-none"><span data-counter="5">0</span><span class="text-slate2">/5</span></div>
+        <div class="mt-3 text-sm md:text-base text-slate2 font-medium">la note moyenne<br>sur Google</div>
+      </div>
+      <div class="reveal">
+        <div class="kpi font-display font-extrabold text-5xl md:text-7xl text-ink leading-none">6<span class="text-accent">+</span></div>
+        <div class="mt-3 text-sm md:text-base text-slate2 font-medium">années de fidélité<br>côté clients</div>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-10 md:gap-14 items-start">
+      <div class="lg:col-span-5 reveal">
+        <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Pourquoi nous choisir</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-ink leading-tight">
+          Votre entreprise de menuiserie à Mulhouse, <span class="text-accent">au service de votre projet.</span>
+        </h2>
+        <p class="mt-6 text-slate2 text-lg leading-relaxed">
+          Vous souhaitez réaliser des travaux de menuiserie ? Besoin d'un renseignement sur nos tarifs ? N'hésitez pas à prendre contact avec votre entreprise de menuiserie.
+        </p>
+        <a href="#avis" class="mt-8 inline-flex items-center gap-2 text-ink font-semibold hover:text-accent transition">
+          Voir les avis clients
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+        <!-- Engagements -->
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Produits de qualité</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Afin de vous offrir des prestations aux résultats durables et de qualité, nous disposons de fournisseurs allemands connus pour la fiabilité de leurs produits.</p>
+        </div>
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Conseils personnalisés</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Proches de chacun de nos clients, nous nous déplaçons à votre domicile pour évaluer vos besoins préalablement et réalisons vos travaux avec la plus grande fiabilité.</p>
+        </div>
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Gestion des délais</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Nous tenons à rendre un travail impeccable qui tient compte de vos besoins et de vos envies, mais également de toute contrainte technique spécifique.</p>
+        </div>
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Expert en dépannage</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Réactif et professionnel, notre service dépannage vous assiste pour toutes vos menuiseries.</p>
+        </div>
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Bon rapport qualité/prix</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Faites-nous part de votre projet et demandez votre devis gratuit et sans engagement.</p>
+        </div>
+        <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 hover:border-accent/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-2h13l3 3v5h-3a2 2 0 1 1-4 0H10a2 2 0 1 1-4 0H3z"/><circle cx="7" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-ink">Déplacement gratuit</h3>
+          <p class="mt-2 text-sm text-slate2 leading-relaxed">Avant que nous vous annoncions un coût, nous effectuons une prise de mesure à votre domicile et nous vous offrons plusieurs options détaillées dans un devis personnalisé.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 5. CITATION PIETRO — PLEINE PAGE                             -->
+<!-- ============================================================ -->
+<section class="relative py-32 md:py-44 overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="img/20220505_143207-1920w.webp" alt="Porte d'entrée alsacienne posée par Techni Fermetures" class="w-full h-full object-cover" loading="lazy">
+    <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(15,20,25,.88) 0%, rgba(15,20,25,.72) 50%, rgba(15,20,25,.92) 100%);"></div>
+  </div>
+
+  <div class="relative max-w-5xl mx-auto px-5 md:px-8 text-center">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 text-yellow-400 text-xl md:text-2xl mb-8 tracking-[0.1em]">★★★★★</div>
+      <svg class="mx-auto mb-8 text-accent opacity-80" width="56" height="44" viewBox="0 0 56 44" fill="currentColor"><path d="M0 44V28C0 20.4 1.6 13.6 4.8 7.6C8 1.6 13.2 -1.6 20.4 -1.2L23.2 4.4C18.4 5.6 14.8 8 12.4 11.6C10 15.2 8.8 19.2 8.8 23.6V25.6H23.2V44H0ZM32.8 44V28C32.8 20.4 34.4 13.6 37.6 7.6C40.8 1.6 46 -1.6 53.2 -1.2L56 4.4C51.2 5.6 47.6 8 45.2 11.6C42.8 15.2 41.6 19.2 41.6 23.6V25.6H56V44H32.8Z"/></svg>
+
+      <blockquote class="quote-serif text-bone text-3xl md:text-5xl lg:text-[3.5rem] leading-[1.15] tracking-tight">
+        Une société qui effectue toujours des travaux de très bonne qualité. Je n'ai jamais été déçu depuis plus de <span class="text-accent">six ans</span> concernant la réparation de mes volets…
+      </blockquote>
+
+      <div class="mt-10 md:mt-12 flex items-center justify-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-accent text-bone font-display font-bold text-lg flex items-center justify-center flex-shrink-0">PM</div>
+        <div class="text-left">
+          <div class="text-bone font-display font-bold text-lg">Pietro Messina</div>
+          <div class="text-bone/60 text-sm">Client fidèle depuis 6+ ans · mai 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 6. SOLUTIONS PROFESSIONNELLES (B2B)                          -->
+<!-- ============================================================ -->
+<section id="pros" class="relative py-24 md:py-32 bg-inksoft text-bone overflow-hidden">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-30 hidden md:block">
+    <img src="img/2021-11-24.webp" alt="" class="w-full h-full object-cover" loading="lazy" />
+    <div class="absolute inset-0 bg-gradient-to-r from-inksoft via-inksoft/85 to-inksoft/30"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 md:gap-16 items-center">
+    <div class="lg:col-span-7 reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Vous êtes professionnel ?</div>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-bone leading-tight">
+        Quand votre activité s'arrête,<br>
+        <span class="text-accent">notre intervention démarre.</span>
+      </h2>
+      <p class="mt-6 text-bone/75 text-lg leading-relaxed max-w-2xl">
+        Cabinet médical, commerce, atelier, entrepôt&nbsp;: une porte qui ne s'ouvre plus, c'est une journée perdue. Notre équipe est qualifiée pour intervenir sur les portes industrielles, sectionnelles, rideaux métalliques et motorisations de toutes marques — en pose neuve comme en maintenance.
+      </p>
+
+      <ul class="mt-8 space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="text-accent mt-1.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="text-bone/90">Portes industrielles sur mesure et sectionnelles rapides</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="text-accent mt-1.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="text-bone/90">Maintenance préventive et dépannage prioritaire</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="text-accent mt-1.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="text-bone/90">Rideaux métalliques, motorisations, portes de garage pros</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="text-accent mt-1.5 flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="text-bone/90">Étude chiffrée et détaillée respectant les normes en vigueur</span>
+        </li>
+      </ul>
+
+      <div class="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="tel:+33389641484" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accentdark text-white px-7 py-4 rounded-full font-semibold transition">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          Demander un devis pro
+        </a>
+        <a href="mailto:techni.fermetures@orange.fr" class="inline-flex items-center justify-center gap-2 border border-bone/30 hover:border-bone text-bone px-7 py-4 rounded-full font-semibold transition">
+          Nous écrire
+        </a>
+      </div>
+    </div>
+
+    <!-- B2B testimonial card -->
+    <div class="lg:col-span-5 reveal">
+      <div class="bg-bone text-ink rounded-3xl p-8 md:p-10 shadow-2xl relative">
+        <div class="absolute -top-4 left-8 bg-accent text-white text-xs font-bold uppercase tracking-[0.15em] px-3 py-1.5 rounded-full">Témoignage pro</div>
+        <div class="flex items-center gap-2 text-yellow-500 mb-4 mt-2">★★★★★</div>
+        <p class="text-ink text-lg leading-relaxed">
+          « <span class="font-medium">En tant que professionnel</span>, c'est une nécessité que les entreprises avec lesquelles je travaille puissent intervenir rapidement au cabinet… »
+        </p>
+        <div class="mt-6 pt-6 border-t border-ink/10 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-ink text-bone font-display font-bold text-sm flex items-center justify-center flex-shrink-0">CL</div>
+          <div>
+            <div class="font-display font-bold text-ink">Christophe Lievremont</div>
+            <div class="text-slate2 text-sm">Cabinet professionnel · janvier 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. GALERIE                                                   -->
+<!-- ============================================================ -->
+<section id="galerie" class="relative py-24 md:py-32 bg-bone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 reveal">
+      <div>
+        <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Réalisations</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-ink leading-tight max-w-3xl">
+          Quelques chantiers <span class="text-slate2 font-semibold">qui parlent pour nous.</span>
+        </h2>
+      </div>
+      <p class="text-slate2 text-base md:text-lg max-w-md leading-relaxed">
+        Particuliers, professionnels, neuf ou rénovation&nbsp;: un aperçu de ce que nous installons à Mulhouse et ses alentours.
+      </p>
+    </div>
+
+    <!-- Grid masonry-like (CSS columns) -->
+    <div id="gallery" class="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-5 [&>*]:break-inside-avoid [&>*]:mb-4 md:[&>*]:mb-5">
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="volets" data-src="img/20200806_170427-1920w.webp" data-cap="Stores extérieurs sur façade contemporaine">
+        <img src="img/20200806_170427-1920w.webp" alt="Stores extérieurs sur façade contemporaine" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Stores extérieurs · contemporain</div>
+      </div>
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portes" data-src="img/2021-11-24%20%285%29.webp" data-cap="Porte d'entrée alu anthracite design">
+        <img src="img/2021-11-24 (5).webp" alt="Porte d'entrée alu anthracite design" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Porte d'entrée · alu design</div>
+      </div>
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portails" data-src="img/2021-11-24%20%283%29.webp" data-cap="Porte de garage + porte d'entrée anthracite">
+        <img src="img/2021-11-24 (3).webp" alt="Porte de garage et porte d'entrée anthracite" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Garage & entrée · ensemble</div>
+      </div>
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="fenetres" data-src="img/20211130_144101-1920w.webp" data-cap="Baie vitrée aluminium coulissante">
+        <img src="img/20211130_144101-1920w.webp" alt="Baie vitrée aluminium coulissante" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Baie vitrée · alu coulissante</div>
+      </div>
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portails" data-src="img/2021-11-24%20%284%29.webp" data-cap="Portail anthracite contemporain">
+        <img src="img/2021-11-24 (4).webp" alt="Portail anthracite contemporain" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Portail · anthracite</div>
+      </div>
+      <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="volets" data-src="img/2021-11-24%20%281%29.webp" data-cap="Stores extérieurs rouges terrasse">
+        <img src="img/2021-11-24 (1).webp" alt="Stores extérieurs rouges sur terrasse" loading="lazy" class="w-full h-auto object-cover" />
+        <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Stores terrasse · sur mesure</div>
+      </div>
+    </div>
+    <div class="mt-12 text-center reveal">
+      <a href="realisations.html" class="inline-flex items-center gap-2 bg-ink hover:bg-inksoft text-bone px-7 py-4 rounded-full font-semibold transition">
+        Voir toutes nos réalisations
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 8. AVIS CLIENTS                                              -->
+<!-- ============================================================ -->
+<section id="avis" class="relative py-24 md:py-32 bg-stone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+
+    <!-- Header -->
+    <div class="grid lg:grid-cols-12 gap-10 items-end mb-14 md:mb-20 reveal">
+      <div class="lg:col-span-7">
+        <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Avis vérifiés</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl text-ink leading-tight">
+          8 avis Google.<br>
+          <span class="text-accent">Tous notés 5 sur 5.</span>
+        </h2>
+        <p class="mt-6 text-slate2 text-lg leading-relaxed max-w-2xl">
+          Plusieurs de nos clients sont passés à plusieurs reprises depuis 6, 7, 10 ans. Voilà ce qu'ils écrivent — orthographe et signatures incluses.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="bg-white border border-ink/8 rounded-3xl p-6 md:p-8 shadow-soft flex items-center gap-6">
+          <!-- Google G -->
+          <svg width="56" height="56" viewBox="0 0 48 48" class="flex-shrink-0">
+            <path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+          <div>
+            <div class="font-display font-extrabold text-3xl md:text-4xl text-ink">5,0<span class="text-slate2 text-xl">/5</span></div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-yellow-500 text-base">★★★★★</span>
+              <span class="text-xs text-slate2">8 avis vérifiés Google</span>
+            </div>
+            <a href="https://www.google.com/search?q=techni+fermetures+mulhouse" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-ink hover:text-accent transition">
+              Voir tous les avis
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+
+      <!-- Safia Nah - Artan -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft relative">
+        <div class="absolute -top-3 left-7 bg-accent text-white text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full">Technique 5/5 · Artan</div>
+        <div class="flex items-center gap-2 text-yellow-500 mb-3 mt-2">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« Un grand merci à Artan pour son professionnalisme. Après deux interventions à la maison, je ne peux que constater un travail propre et soigné. Très discret dans… »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">SN</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Safia Nah</div>
+              <div class="text-slate2 text-xs">avril 2025</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+
+      <!-- Patrick Colin - fidélité -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft relative">
+        <div class="absolute -top-3 left-7 bg-ink text-bone text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full">Client fidèle</div>
+        <div class="flex items-center gap-2 text-yellow-500 mb-3 mt-2">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« À de nombreuses reprises cette entreprise est intervenue à mon domicile pour diverses réparations sur des volets. La dernière en date a été un remplacement des… »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">PC</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Patrick Colin</div>
+              <div class="text-slate2 text-xs">juillet 2022</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+
+      <!-- Marlène - Laurence -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft relative">
+        <div class="absolute -top-3 left-7 bg-accent text-white text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full">Accueil 5/5 · Mme Laurence</div>
+        <div class="flex items-center gap-2 text-yellow-500 mb-3 mt-2">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« Accueil téléphonique impeccable et de la part de Mme LAURENCE. Elle a écouté ma demande, a répondu avec clarté à mes interrogations quant au coût et m'a proposé… »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">M</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Marlène</div>
+              <div class="text-slate2 text-xs">juin 2023</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+
+      <!-- Didier S -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft">
+        <div class="flex items-center gap-2 text-yellow-500 mb-3">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« Excellente entreprise, professionnelle et aux tarifs raisonnables. En plus les techniciens sont très sympas. »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">DS</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Didier S</div>
+              <div class="text-slate2 text-xs">juillet 2025</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+
+      <!-- Catherine Monnier -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft relative">
+        <div class="absolute -top-3 left-7 bg-ink text-bone text-[10px] font-bold uppercase tracking-[0.15em] px-3 py-1 rounded-full">Client fidèle</div>
+        <div class="flex items-center gap-2 text-yellow-500 mb-3 mt-2">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« À de nombreuses reprises cette entreprise est intervenue pour diverses réparations de mes volets ! Je n'aie jamais été déçue, compétente, travail propre je ne peux recommander ! Cordialement »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">CM</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Catherine Monnier</div>
+              <div class="text-slate2 text-xs">novembre 2024</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+
+      <!-- Eliane Jakovljev - SAV -->
+      <article class="reveal bg-white rounded-2xl p-7 border border-ink/8 hover:border-accent/30 transition shadow-soft">
+        <div class="flex items-center gap-2 text-yellow-500 mb-3">★★★★★</div>
+        <p class="text-ink text-[15px] leading-relaxed">« La société Techni-Fermetures est intervenue pour le réglage et l'entretien de nos fenêtres PVC nous sommes très satisfait de leur travail une entreprise très professionnelle et le personnel très sympathique »</p>
+        <div class="mt-5 pt-5 border-t border-ink/10 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink/10 text-ink font-display font-bold text-sm flex items-center justify-center">EJ</div>
+            <div>
+              <div class="font-display font-semibold text-sm text-ink">Eliane Jakovljev</div>
+              <div class="text-slate2 text-xs">janvier 2025</div>
+            </div>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        </div>
+      </article>
+    </div>
+
+    <div class="mt-14 text-center reveal">
+      <a href="https://www.google.com/search?q=techni+fermetures+mulhouse" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-ink hover:bg-inksoft text-bone px-7 py-4 rounded-full font-semibold transition">
+        Voir tous les avis sur Google
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 9. CONTACT                                                   -->
+<!-- ============================================================ -->
+<section id="contact" class="relative py-24 md:py-32 bg-ink text-bone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-12 gap-10 md:gap-16">
+      <!-- Left: Info -->
+      <div class="lg:col-span-5 reveal">
+        <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Contact</div>
+        <h2 class="font-display font-extrabold text-4xl md:text-5xl text-bone leading-tight">
+          Parlons de votre projet.
+        </h2>
+        <p class="mt-6 text-bone/70 text-lg leading-relaxed">
+          Devis gratuit et sans engagement, déplacement chez vous pour la prise de mesure, étude chiffrée et détaillée. Pour les dépannages en urgence, le téléphone reste le plus rapide.
+        </p>
+
+        <div class="mt-10 space-y-6">
+          <a href="tel:+33389641484" class="group flex items-start gap-4 hover:text-accent transition">
+            <div class="w-11 h-11 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="text-bone/50 text-xs uppercase tracking-wider font-semibold">Téléphone</div>
+              <div class="font-display font-bold text-xl md:text-2xl text-bone group-hover:text-accent transition">03 89 64 14 84</div>
+            </div>
+          </a>
+
+          <a href="mailto:techni.fermetures@orange.fr" class="group flex items-start gap-4 hover:text-accent transition">
+            <div class="w-11 h-11 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="text-bone/50 text-xs uppercase tracking-wider font-semibold">Email</div>
+              <div class="font-display font-semibold text-base md:text-lg text-bone group-hover:text-accent transition break-all">techni.fermetures@orange.fr</div>
+            </div>
+          </a>
+
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="text-bone/50 text-xs uppercase tracking-wider font-semibold">Adresse</div>
+              <div class="font-display font-semibold text-bone leading-snug">2 Rue des Flandres<br>Village Artisanal Drouot<br>68100 Mulhouse</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 rounded-xl bg-accent/15 border border-accent/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="text-bone/50 text-xs uppercase tracking-wider font-semibold">Horaires</div>
+              <div class="text-bone/90 text-sm leading-relaxed mt-1">
+                <div>Lundi – Jeudi : <span class="font-semibold">8h15-12h15 / 13h30-17h15</span></div>
+                <div>Vendredi : <span class="font-semibold">8h15-12h15</span></div>
+                <div>Samedi & dimanche : fermé</div>
+                <div class="mt-2 text-accent text-xs font-bold uppercase tracking-[0.15em]">⚡ Dépannage en urgence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-7 reveal">
+        <form class="bg-bone text-ink rounded-3xl p-7 md:p-10 shadow-2xl">
+          <h3 class="font-display font-bold text-2xl md:text-3xl text-ink mb-2">Demande de devis gratuit</h3>
+          <p class="text-slate2 text-sm mb-7">Nous vous recontactons sous 24h pour fixer un rendez-vous de prise de mesure.</p>
+
+          <div class="mb-5">
+            <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Vous êtes</label>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="cursor-pointer">
+                <input type="radio" name="type" value="particulier" class="peer sr-only" checked>
+                <div class="text-center px-3 py-3 rounded-xl border border-ink/15 peer-checked:border-accent peer-checked:bg-accent/5 peer-checked:text-accent font-semibold text-sm transition">Particulier</div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="type" value="pro" class="peer sr-only">
+                <div class="text-center px-3 py-3 rounded-xl border border-ink/15 peer-checked:border-accent peer-checked:bg-accent/5 peer-checked:text-accent font-semibold text-sm transition">Professionnel</div>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="type" value="urgence" class="peer sr-only">
+                <div class="text-center px-3 py-3 rounded-xl border border-ink/15 peer-checked:border-accent peer-checked:bg-accent/5 peer-checked:text-accent font-semibold text-sm transition">Dépannage urgent</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Nom</label>
+              <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 rounded-xl border border-ink/15 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Téléphone</label>
+              <input type="tel" placeholder="06 ..." class="w-full px-4 py-3 rounded-xl border border-ink/15 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Email</label>
+            <input type="email" placeholder="vous@exemple.fr" class="w-full px-4 py-3 rounded-xl border border-ink/15 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Votre projet</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-ink/15 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition bg-white">
+              <option>Fenêtres (PVC ou aluminium)</option>
+              <option>Volets roulants / Stores BSO</option>
+              <option>Porte d'entrée</option>
+              <option>Portail / Porte de garage</option>
+              <option>Porte industrielle</option>
+              <option>Motorisation</option>
+              <option>SAV / Dépannage</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-xs font-bold uppercase tracking-[0.12em] text-slate2 mb-2">Décrivez votre besoin</label>
+            <textarea rows="4" placeholder="Quelques mots sur votre projet, vos délais, votre adresse…" class="w-full px-4 py-3 rounded-xl border border-ink/15 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/15 transition resize-none"></textarea>
+          </div>
+
+          <button type="button" onclick="alert('Maquette — formulaire non actif. Appelez le 03 89 64 14 84 ou écrivez à techni.fermetures@orange.fr');" class="w-full bg-accent hover:bg-accentdark text-white font-semibold py-4 rounded-xl transition">
+            Envoyer ma demande
+          </button>
+
+          <p class="mt-4 text-xs text-slate2 text-center">Devis gratuit & sans engagement · Réponse sous 24h ouvrées</p>
+        </form>
+
+        <!-- Map -->
+        <div class="mt-6 rounded-3xl overflow-hidden border border-bone/10 aspect-[16/9] bg-stone">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=7.310%2C47.745%2C7.360%2C47.770&layer=mapnik&marker=47.7576%2C7.3340"
+            class="w-full h-full"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Techni Fermetures — 2 Rue des Flandres, Mulhouse"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER                                                       -->
+<!-- ============================================================ -->
+<footer class="bg-ink text-bone/70 border-t border-bone/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-14">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-12 w-auto mb-5" />
+        <p class="text-sm leading-relaxed max-w-md text-bone/65">
+          Travaux de menuiserie intérieure et extérieure · Pose de portes industrielles · Motorisation de menuiseries · Dépannage en urgence · Particuliers & professionnels.
+        </p>
+        <div class="mt-6 inline-flex items-center gap-3 bg-bone/5 border border-bone/15 rounded-full px-4 py-2 text-xs">
+          <span class="text-yellow-400">★★★★★</span>
+          <span class="text-bone/80 font-semibold">5/5 sur Google · 8 avis vérifiés</span>
+        </div>
+      </div>
+
+      <div class="md:col-span-3">
+        <div class="text-bone font-display font-bold text-sm uppercase tracking-[0.15em] mb-4">Services</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="fenetres.html" class="hover:text-accent transition">Fenêtres</a></li>
+          <li><a href="volets-roulants.html" class="hover:text-accent transition">Volets roulants</a></li>
+          <li><a href="portes-d-entree.html" class="hover:text-accent transition">Portes d'entrée</a></li>
+          <li><a href="stores-bso.html" class="hover:text-accent transition">Stores &amp; BSO</a></li>
+          <li><a href="portails.html" class="hover:text-accent transition">Portails</a></li>
+          <li><a href="portes-de-garage.html" class="hover:text-accent transition">Portes de garage</a></li>
+          <li><a href="portes-industrielles.html" class="hover:text-accent transition">Portes industrielles</a></li>
+          <li><a href="motorisations.html" class="hover:text-accent transition">Motorisations</a></li>
+          <li><a href="sav-depannage.html" class="hover:text-accent transition">SAV &amp; dépannage</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <div class="text-bone font-display font-bold text-sm uppercase tracking-[0.15em] mb-4">Contact</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:+33389641484" class="hover:text-accent transition">03 89 64 14 84</a></li>
+          <li><a href="mailto:techni.fermetures@orange.fr" class="hover:text-accent transition">techni.fermetures@orange.fr</a></li>
+          <li class="pt-2">2 Rue des Flandres<br>Village Artisanal Drouot<br>68100 Mulhouse</li>
+          <li class="pt-2 text-bone/60">Zone d'intervention : Mulhouse et ses alentours</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Baseline officielle -->
+    <div class="mt-12 pt-8 border-t border-bone/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="text-accent italic font-display text-sm md:text-base">« L'énergie est notre avenir, économisons-la ! »</div>
+      <div class="text-xs text-bone/50 flex flex-wrap gap-x-4 gap-y-1">
+        <span>© 2026 Techni Fermetures</span>
+        <span>SIRET 415 149 822 000 17</span>
+        <span>TVA FR33 415 149 822</span>
+        <a href="#" class="hover:text-accent transition">Mentions légales</a>
+      </div>
+    </div>
+
+    <div class="mt-6 text-[11px] text-bone/35 text-center">Maquette réalisée par SKYPEO — agence web Nancy</div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- STICKY MOBILE CTA                                            -->
+<!-- ============================================================ -->
+<a href="tel:+33389641484" id="stickyCta" class="sticky-cta lg:hidden fixed bottom-4 left-4 right-4 z-40 bg-accent hover:bg-accentdark text-white rounded-2xl px-5 py-3.5 flex items-center justify-between gap-3 font-semibold shadow-2xl transition translate-y-24 opacity-0">
+  <span class="flex items-center gap-2.5">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+    <span>03 89 64 14 84</span>
+  </span>
+  <span class="text-xs font-normal text-white/85 border-l border-white/30 pl-3">Devis gratuit</span>
+</a>
+
+<!-- ============================================================ -->
+<!-- LIGHTBOX                                                     -->
+<!-- ============================================================ -->
+<div id="lightbox" class="lb hidden fixed inset-0 z-[100] bg-ink/95 flex items-center justify-center p-4 md:p-8" onclick="closeLightbox()">
+  <button class="absolute top-5 right-5 text-bone/90 hover:text-white text-3xl font-light" onclick="closeLightbox()" aria-label="Fermer">×</button>
+  <figure class="max-w-5xl max-h-[90vh] flex flex-col items-center">
+    <img id="lbImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-xl">
+    <figcaption id="lbCap" class="mt-4 text-bone/80 text-sm md:text-base"></figcaption>
+  </figure>
+</div>
+
+<!-- ============================================================ -->
+<!-- JS                                                           -->
+<!-- ============================================================ -->
+<script>
+// Header transparent → opaque on scroll
+const nav = document.getElementById('nav');
+const stickyCta = document.getElementById('stickyCta');
+let lastScroll = 0;
+function onScroll() {
+  const y = window.scrollY;
+  if (y > 40) { nav.classList.add('nav-scrolled'); } else { nav.classList.remove('nav-scrolled'); }
+  // Show sticky CTA after scrolling past hero
+  if (y > 600) {
+    stickyCta.classList.remove('translate-y-24', 'opacity-0');
+  } else {
+    stickyCta.classList.add('translate-y-24', 'opacity-0');
+  }
+  lastScroll = y;
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (menuBtn && mobileMenu) {
+  // Fermé = display:none (`hidden`) ; `is-open` est ajouté une frame après l'affichage pour jouer la transition.
+  const openMenu = () => {
+    mobileMenu.classList.remove('hidden');
+    requestAnimationFrame(() => requestAnimationFrame(() => mobileMenu.classList.add('is-open')));
+    document.body.style.overflow = 'hidden';
+  };
+  const closeMenu = () => {
+    mobileMenu.classList.remove('is-open');
+    document.body.style.overflow = '';
+    setTimeout(() => { if (!mobileMenu.classList.contains('is-open')) mobileMenu.classList.add('hidden'); }, 480);
+  };
+  menuBtn.addEventListener('click', () => mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu());
+  mobileMenu.querySelector('.offcanvas-backdrop')?.addEventListener('click', closeMenu);
+  mobileMenu.querySelector('.offcanvas-close')?.addEventListener('click', closeMenu);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+}
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Counter animation
+const counters = document.querySelectorAll('[data-counter]');
+const cio = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseInt(el.dataset.counter, 10);
+      const duration = 1400;
+      const start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      cio.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => cio.observe(c));
+
+// Gallery filters
+const pills = document.querySelectorAll('#filterBar .pill');
+const tiles = document.querySelectorAll('#gallery .g-tile');
+pills.forEach(p => {
+  p.addEventListener('click', () => {
+    pills.forEach(x => x.classList.remove('is-active'));
+    p.classList.add('is-active');
+    const f = p.dataset.filter;
+    tiles.forEach(t => {
+      if (f === 'all' || t.dataset.cat === f) { t.style.display = ''; }
+      else { t.style.display = 'none'; }
+    });
+  });
+});
+
+// Lightbox
+function openLightbox(src, cap) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lbCap').textContent = cap || '';
+  document.getElementById('lightbox').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.add('hidden');
+  document.body.style.overflow = '';
+}
+tiles.forEach(t => {
+  t.addEventListener('click', () => openLightbox(t.dataset.src, t.dataset.cap));
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+</script>
+
+</body>
+</html>

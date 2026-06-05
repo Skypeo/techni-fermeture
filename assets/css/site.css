@@ -1,0 +1,133 @@
+/* ============================================================
+   Techni Fermetures — styles partagés (design system maquette)
+   ============================================================ */
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; color: #0F1419; background: #FAFAF7; }
+h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.02em; }
+
+/* Scroll-driven fade-in */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* Header transition */
+.nav { transition: background-color .35s ease, box-shadow .35s ease, border-color .35s ease; }
+.nav-scrolled { background: rgba(250,250,247,.92); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid rgba(15,20,25,.08); }
+.nav-scrolled .nav-link { color: #0F1419; }
+.nav-scrolled .nav-link.text-accent { color: #C00000; } /* le lien de la page active reste rouge au scroll */
+.nav-scrolled .nav-logo-mark { filter: none; }
+
+/* Variante header : fond clair en permanence (pages intérieures sans hero plein écran) */
+.nav-solid { background: rgba(250,250,247,.92); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid rgba(15,20,25,.08); }
+.nav-solid .nav-link { color: #0F1419; }
+
+/* Accent underline animation */
+.accent-underline { position: relative; }
+.accent-underline::after {
+  content: ""; position: absolute; left: 0; bottom: -6px; width: 56px; height: 3px;
+  background: linear-gradient(90deg, #C00000 0%, #C00000 60%, transparent 100%);
+  border-radius: 2px;
+}
+
+/* Hero gradient overlay (accueil — vidéo) */
+.hero-overlay {
+  background:
+    linear-gradient(180deg, rgba(15,20,25,.45) 0%, rgba(15,20,25,.25) 35%, rgba(15,20,25,.75) 100%),
+    linear-gradient(90deg, rgba(15,20,25,.55) 0%, rgba(15,20,25,.15) 60%, rgba(15,20,25,.15) 100%);
+}
+
+/* Hero intérieur (pages produit — image fixe) */
+.hero-inner-overlay {
+  background: linear-gradient(180deg, rgba(15,20,25,.55) 0%, rgba(15,20,25,.45) 40%, rgba(15,20,25,.82) 100%);
+}
+
+/* Service card */
+.svc-card { transition: transform .5s cubic-bezier(.2,.6,.2,1), box-shadow .5s ease, border-color .5s ease; }
+.svc-card:hover { transform: translateY(-6px); box-shadow: 0 8px 16px rgba(15,20,25,.05), 0 32px 56px rgba(15,20,25,.14); border-color: rgba(192,0,0,.4); }
+.svc-card .svc-img { transition: transform 1.2s cubic-bezier(.2,.6,.2,1); }
+.svc-card:hover .svc-img { transform: scale(1.06); }
+
+/* Timeline */
+.tl-dot { position: relative; }
+.tl-dot::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; transform: translateX(-50%);
+  background: linear-gradient(180deg, transparent 0, rgba(192,0,0,.3) 12%, rgba(192,0,0,.3) 88%, transparent 100%);
+}
+@media (max-width:767px) { .tl-dot::before { left: 22px; } }
+
+/* Gallery */
+.g-tile { transition: transform .5s ease; overflow: hidden; }
+.g-tile img { transition: transform .8s cubic-bezier(.2,.6,.2,1), filter .5s; }
+.g-tile:hover img { transform: scale(1.06); filter: brightness(1.04); }
+.g-tile .g-label { transform: translateY(8px); opacity: 0; transition: all .4s ease; }
+.g-tile:hover .g-label { transform: translateY(0); opacity: 1; }
+
+/* Quote serif used only for the pull-quote */
+.quote-serif {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: -0.015em;
+}
+
+/* Sticky mobile CTA */
+.sticky-cta { box-shadow: 0 -8px 24px rgba(15,20,25,.18); }
+
+/* Lightbox */
+.lb { transition: opacity .25s ease; }
+.lb.hidden { display: none; }
+
+/* Counter highlight */
+.kpi { font-variant-numeric: tabular-nums; }
+
+/* Filter pills */
+.pill { transition: all .25s ease; }
+.pill.is-active { background: #0F1419; color: #FAFAF7; border-color: #0F1419; }
+
+/* Window-open hover micro animation */
+.window-hover { perspective: 800px; }
+.window-hover .window-pane { transition: transform .6s cubic-bezier(.2,.6,.2,1); transform-origin: left center; }
+.window-hover:hover .window-pane { transform: rotateY(-14deg); }
+
+/* Subtle texture for stone bg */
+.stone-grain {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(192,0,0,.04) 0%, transparent 30%),
+    radial-gradient(circle at 88% 76%, rgba(45,85,71,.04) 0%, transparent 32%);
+}
+
+/* Menu déroulant "Nos services" :
+   - le déclencheur s'étire sur toute la hauteur du header (zone de survol large)
+   - délai de fermeture (.25s) pour tolérer un passage hors du menu */
+.services-trigger { align-self: stretch; display: inline-flex; align-items: center; }
+.services-menu { transition: opacity .2s ease, transform .2s ease, visibility .2s; transition-delay: .25s; }
+.services-trigger:hover .services-menu,
+.services-trigger:focus-within .services-menu,
+.services-menu:hover { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; transition-delay: 0s; }
+
+/* Burger moderne : 2 traits, le bas plus court (s'étend au survol).
+   Suit la couleur du header (currentColor) et passe en ink quand la nav devient claire au scroll. */
+.nav-burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+.nav-burger .burger-box { position: relative; display: block; width: 26px; height: 14px; }
+.nav-burger .burger-line { position: absolute; right: 0; height: 2px; border-radius: 2px; background: currentColor; transition: width .3s ease; }
+.nav-burger .burger-line:first-child { top: 0; width: 26px; }
+.nav-burger .burger-line:last-child { top: 12px; width: 17px; }
+.nav-burger:hover .burger-line:last-child, .nav-burger:focus-visible .burger-line:last-child { width: 26px; }
+.nav-scrolled .nav-burger { color: #0F1419; }
+
+/* Menu off-canvas (mobile / tablette) :
+   panneau qui glisse depuis la droite + backdrop, liens révélés en cascade (--i).
+   Fermé = display:none (classe Tailwind `hidden`, gérée par site.js) — pas d'état intermédiaire possible. */
+.offcanvas-backdrop { opacity: 0; transition: opacity .35s ease; }
+.offcanvas.is-open .offcanvas-backdrop { opacity: 1; }
+.offcanvas-panel { transform: translateX(100%); transition: transform .45s cubic-bezier(.22,.61,.36,1); }
+.offcanvas.is-open .offcanvas-panel { transform: translateX(0); }
+.offcanvas .oc-item { opacity: 0; transform: translateX(18px); transition: opacity .3s ease, transform .3s ease; }
+.offcanvas.is-open .oc-item { opacity: 1; transform: none; transition-delay: calc(.12s + .035s * var(--i, 0)); }
+
+/* Scrollbar rouge dans la zone de liens du menu off-canvas (indique qu'on peut descendre) */
+.offcanvas-panel nav { scrollbar-width: thin; scrollbar-color: #C00000 rgba(15,20,25,.07); }
+.offcanvas-panel nav::-webkit-scrollbar { width: 6px; }
+.offcanvas-panel nav::-webkit-scrollbar-track { background: rgba(15,20,25,.07); border-radius: 3px; }
+.offcanvas-panel nav::-webkit-scrollbar-thumb { background: #C00000; border-radius: 3px; }
+.offcanvas-panel nav::-webkit-scrollbar-thumb:hover { background: #9A0000; }

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAV & dépannage de menuiseries en urgence à Mulhouse | Techni Fermetures</title>
+<meta name="description" content="Dépannage de menuiseries en urgence à Mulhouse : fenêtres, volets roulants, portails, motorisations. Vitre brisée, volet bloqué, moteur en panne. Intervention rapide, toutes marques.">
+<meta name="theme-color" content="#0F1419">
+<link rel="canonical" href="https://www.techni-fermetures.com/sav-depannage.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F1419'/><text x='6' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23C00000'>T</text><text x='15' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23FAFAF7'>F</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind-config.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="antialiased">
+
+<!-- HEADER -->
+<header id="nav" class="nav fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[72px] md:h-[84px]">
+    <a href="index.html" class="flex items-center gap-3"><img src="img/TechnifermLogo.webp" alt="Techni Fermetures Mulhouse" class="nav-logo-mark h-10 md:h-12 w-auto drop-shadow-lg" /></a>
+    <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html" class="nav-link text-white hover:text-accent transition">Accueil</a>
+      <div class="services-trigger relative">
+        <button class="nav-link text-white hover:text-accent transition inline-flex items-center gap-1.5">Nos services<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="services-menu absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[320px] opacity-0 invisible translate-y-1 pointer-events-none">
+          <div class="bg-white border border-ink/10 rounded-2xl shadow-lift p-2 grid grid-cols-1 gap-0.5">
+            <a href="fenetres.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Fenêtres</a>
+            <a href="volets-roulants.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Volets roulants</a>
+            <a href="portes-d-entree.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes d'entrée</a>
+            <a href="stores-bso.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Stores & BSO</a>
+            <a href="portails.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portails</a>
+            <a href="portes-de-garage.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes de garage</a>
+            <a href="portes-industrielles.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Portes industrielles</a>
+            <a href="motorisations.html" class="px-4 py-2.5 rounded-xl text-ink hover:bg-stone transition text-sm">Motorisations</a>
+            <a href="sav-depannage.html" class="px-4 py-2.5 rounded-xl text-ink bg-accent/5 font-semibold text-sm">SAV & Dépannage</a>
+          </div>
+        </div>
+      </div>
+      <a href="notre-entreprise.html" class="nav-link text-white hover:text-accent transition">Notre entreprise</a>
+      <a href="realisations.html" class="nav-link text-white hover:text-accent transition">Réalisations</a>
+      <a href="contact.html" class="nav-link text-white hover:text-accent transition">Contact</a>
+    </nav>
+    <a href="tel:+33389641484" class="hidden md:inline-flex items-center gap-2 bg-accent hover:bg-accentdark text-white px-5 py-2.5 rounded-full font-semibold text-sm transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>03 89 64 14 84</a>
+    <button id="menuBtn" class="nav-burger lg:hidden text-white" aria-label="Menu"><span class="burger-box"><span class="burger-line"></span><span class="burger-line"></span></span></button>
+  </div>
+</header>
+
+<!-- Menu off-canvas (mobile / tablette) -->
+  <div id="mobileMenu" class="offcanvas lg:hidden hidden fixed inset-0 z-[70]">
+    <div class="offcanvas-backdrop absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
+    <aside class="offcanvas-panel absolute top-0 right-0 h-full w-[86%] max-w-sm bg-bone shadow-2xl flex flex-col" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="flex items-center justify-between pl-6 pr-5 h-[72px] border-b border-ink/10 flex-shrink-0">
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-9 w-auto" />
+        <button class="offcanvas-close w-10 h-10 rounded-full border border-ink/15 flex items-center justify-center text-ink hover:text-accent hover:border-accent/50 transition" aria-label="Fermer le menu"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+      </div>
+      <nav class="flex-1 overflow-y-auto px-6 py-5">
+        <a href="index.html" class="oc-item flex items-center justify-between py-3 border-b border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:0">Accueil</a>
+        <div class="oc-item pt-5 pb-1.5 text-[11px] uppercase tracking-[0.18em] text-accent font-bold" style="--i:1">Nos services</div>
+        <a href="fenetres.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:2">Fenêtres<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="volets-roulants.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:3">Volets roulants<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-d-entree.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:4">Portes d'entrée<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="stores-bso.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:5">Stores & BSO<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portails.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:6">Portails<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-de-garage.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:7">Portes de garage<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="portes-industrielles.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:8">Portes industrielles<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="motorisations.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-medium text-ink/85 hover:text-accent transition" style="--i:9">Motorisations<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-ink/25"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="sav-depannage.html" class="oc-item flex items-center justify-between py-2.5 text-[15px] font-semibold text-accent transition" style="--i:10">SAV & Dépannage<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-accent/40"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="notre-entreprise.html" class="oc-item flex items-center justify-between py-3 mt-3 border-t border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:11">Notre entreprise</a>
+        <a href="realisations.html" class="oc-item flex items-center justify-between py-3 border-t border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:12">Réalisations</a>
+        <a href="contact.html" class="oc-item flex items-center justify-between py-3 border-t border-b border-ink/5 font-display font-bold text-lg text-ink hover:text-accent transition" style="--i:13">Contact</a>
+      </nav>
+      <div class="oc-item px-6 py-5 border-t border-ink/10 flex-shrink-0 bg-stone" style="--i:14">
+        <a href="tel:+33389641484" class="flex items-center justify-center gap-2.5 bg-accent hover:bg-accentdark text-white rounded-full px-5 py-3.5 font-semibold transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>03 89 64 14 84</a>
+        <p class="mt-3 text-xs text-slate2 text-center leading-relaxed">Lun–jeu : 08h15–12h15 / 13h30–17h15 · Ven : 08h15–12h15</p>
+      </div>
+    </aside>
+  </div>
+<!-- HERO -->
+<section class="relative bg-ink">
+  <div class="relative min-h-[64vh] md:min-h-[72vh] flex items-end overflow-hidden">
+    <img src="img/ancien-site/01-c8a4402d.jpg" alt="Équipe et véhicules de dépannage Techni Fermetures à Mulhouse" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="hero-inner-overlay absolute inset-0"></div>
+    <div class="relative max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20 w-full">
+      <nav class="flex items-center gap-2 text-white/60 text-xs md:text-sm mb-6" aria-label="Fil d'ariane"><a href="index.html" class="hover:text-white transition">Accueil</a><span>/</span><span class="text-white/90">SAV & Dépannage</span></nav>
+      <div class="inline-flex items-center gap-3 mb-5 text-white/80 text-xs md:text-sm tracking-[0.18em] uppercase font-semibold"><span class="w-8 h-px bg-accent"></span><span class="inline-flex items-center gap-2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> Intervention en urgence</span></div>
+      <h1 class="text-white font-display font-extrabold text-[2rem] leading-[1.08] sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl drop-shadow-xl">Dépannage de menuiseries en urgence à Mulhouse</h1>
+      <p class="mt-6 text-white/90 text-lg md:text-xl max-w-2xl leading-relaxed">TECHNI FERMETURES, votre entreprise de menuiserie depuis 1999, intervient pour l'installation et la pose de tous types de menuiseries : fenêtres, volets, stores, portes d'entrée, portails...</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="tel:+33389641484" class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentdark text-white px-7 py-4 rounded-full font-semibold text-base md:text-lg transition shadow-2xl shadow-accent/30"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>Appeler le dépannage</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 border border-white/40 hover:border-white text-white bg-white/5 hover:bg-white/15 backdrop-blur-sm px-7 py-4 rounded-full font-semibold text-base md:text-lg transition">Décrire mon problème<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 : Fenêtres -->
+<section class="relative py-20 md:py-28 bg-bone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 md:gap-16 items-center">
+    <div class="lg:col-span-6 reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Dépannage fenêtres</div>
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">Remplacement de vos fenêtres après effraction ou dégât des eaux</h2>
+      <p class="mt-6 text-slate2 text-lg leading-relaxed">Votre baie vitrée est cassée ? Le verre de votre porte vitrée ou de votre fenêtre est brisé ? Nous réalisons la réparation et le dépannage : huiler des gonds, remplacer une vitre cassée ou fêlée, une poignée abîmée. Contactez-nous pour tout problème sur vos fenêtres, baies et portes vitrées.</p>
+      <p class="mt-4 text-slate2 text-lg leading-relaxed">Lors de nos opérations de maintenance, nous réalisons une vérification globale de vos installations. Grâce à notre expertise, nous intervenons sur n'importe quel type de fenêtre, quelle que soit la marque.</p>
+    </div>
+    <div class="lg:col-span-6 reveal"><div class="rounded-3xl overflow-hidden shadow-lift border border-ink/8 aspect-[4/3]"><img src="img/ancien-site/inCollage_20210723_181243674.jpg" alt="Réparation de baie vitrée par Techni Fermetures" loading="lazy" class="w-full h-full object-cover" /></div></div>
+  </div>
+</section>
+
+<!-- SECTION 2 : Volets -->
+<section class="relative py-20 md:py-28 bg-ink text-bone overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(circle at 1px 1px, #FAFAF7 1px, transparent 0); background-size: 28px 28px;"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative">
+    <div class="max-w-3xl reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Dépannage volets roulants</div>
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-bone leading-tight">Mise en sécurité, réparation et rénovation de vos volets</h2>
+      <p class="mt-6 text-bone/75 text-lg leading-relaxed">Volets roulants comme volets battants nécessitent un entretien et une maintenance dont nous nous chargeons. Notre équipe expérimentée intervient pour une manivelle défectueuse, un volet bloqué, une grenouillère cassée, une sangle coupée, des lames cassées, un déblocage de volet roulant, un dépannage de coffre.</p>
+      <p class="mt-4 text-bone/70 text-lg leading-relaxed">Lors de la maintenance, ou en cas d'effraction ou de dégradation, nous dépêchons un technicien rapidement pour réaliser vos réparations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 ATOUTS -->
+<section class="relative py-16 md:py-20 bg-stone stone-grain">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 text-center shadow-soft"><div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div><h3 class="font-display font-bold text-base md:text-lg text-ink">Dépannage fenêtre</h3></div>
+      <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 text-center shadow-soft"><div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="13" x2="20" y2="13"/></svg></div><h3 class="font-display font-bold text-base md:text-lg text-ink">Dépannage volet roulant</h3></div>
+      <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 text-center shadow-soft"><div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="8" height="16"/><rect x="13" y="4" width="8" height="16"/></svg></div><h3 class="font-display font-bold text-base md:text-lg text-ink">Dépannage portail</h3></div>
+      <div class="reveal bg-white border border-ink/8 rounded-2xl p-6 text-center shadow-soft"><div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3 class="font-display font-bold text-base md:text-lg text-ink">Dépannage motorisation</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : Automatismes -->
+<section class="relative py-20 md:py-28 bg-bone">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-12 gap-10 md:gap-16 items-center">
+    <div class="lg:col-span-6 order-2 lg:order-1 reveal"><div class="rounded-3xl overflow-hidden shadow-lift border border-ink/8 aspect-[4/3]"><img src="img/ancien-site/20211116_151045-1-.jpg" alt="Dépannage de motorisation de portail" loading="lazy" class="w-full h-full object-cover" /></div></div>
+    <div class="lg:col-span-6 order-1 lg:order-2 reveal">
+      <div class="text-accent text-xs md:text-sm tracking-[0.2em] uppercase font-bold mb-4">Dépannage automatismes</div>
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">Maintenance et dépannage de vos motorisations</h2>
+      <p class="mt-6 text-slate2 text-lg leading-relaxed">En cas de panne, nous intervenons sur une grande variété d'équipements : porte de garage, rideau métallique, motorisation de portail, volets roulants électriques, fenêtres de toutes marques, stores intérieurs et extérieurs.</p>
+      <p class="mt-4 text-slate2 text-lg leading-relaxed">Vous cherchez un dépannage rapide de la motorisation de votre portail ou de votre porte de garage ? Nous nous déplaçons dans les meilleurs délais et vous proposons un diagnostic fiable, une réparation rapide et un test de fonctionnement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="relative py-20 md:py-28 bg-inksoft text-bone overflow-hidden">
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-25 hidden md:block"><img src="img/Techniferm1.png" alt="" class="w-full h-full object-cover" loading="lazy" /><div class="absolute inset-0 bg-gradient-to-r from-inksoft via-inksoft/85 to-inksoft/40"></div></div>
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-3xl reveal">
+      <h2 class="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl text-bone leading-tight">Besoin d'une intervention en urgence ?</h2>
+      <p class="mt-6 text-bone/70 text-lg leading-relaxed">Nous intervenons rapidement et établissons un devis gratuit.</p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="tel:+33389641484" class="inline-flex items-center justify-center gap-3 bg-accent hover:bg-accentdark text-white px-7 py-4 rounded-full font-semibold text-base md:text-lg transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>03 89 64 14 84</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 border border-bone/30 hover:border-bone text-bone px-7 py-4 rounded-full font-semibold text-base md:text-lg transition">Formulaire de contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-bone/70 border-t border-bone/10">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-14">
+    <div class="grid md:grid-cols-12 gap-10">
+      <div class="md:col-span-5">
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-12 w-auto mb-5" />
+        <p class="text-sm leading-relaxed max-w-md text-bone/65">Travaux de menuiserie intérieure et extérieure · Pose de portes industrielles · Motorisation de menuiseries · Dépannage en urgence · Particuliers &amp; professionnels.</p>
+        <div class="mt-6 inline-flex items-center gap-3 bg-bone/5 border border-bone/15 rounded-full px-4 py-2 text-xs"><span class="text-yellow-400">★★★★★</span><span class="text-bone/80 font-semibold">5/5 sur Google · 8 avis vérifiés</span></div>
+      </div>
+      <div class="md:col-span-3">
+        <div class="text-bone font-display font-bold text-sm uppercase tracking-[0.15em] mb-4">Nos services</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="fenetres.html" class="hover:text-accent transition">Fenêtres</a></li>
+          <li><a href="volets-roulants.html" class="hover:text-accent transition">Volets roulants</a></li>
+          <li><a href="portes-d-entree.html" class="hover:text-accent transition">Portes d'entrée</a></li>
+          <li><a href="stores-bso.html" class="hover:text-accent transition">Stores &amp; BSO</a></li>
+          <li><a href="portails.html" class="hover:text-accent transition">Portails</a></li>
+          <li><a href="portes-de-garage.html" class="hover:text-accent transition">Portes de garage</a></li>
+          <li><a href="portes-industrielles.html" class="hover:text-accent transition">Portes industrielles</a></li>
+          <li><a href="motorisations.html" class="hover:text-accent transition">Motorisations</a></li>
+          <li><a href="sav-depannage.html" class="hover:text-accent transition">SAV &amp; dépannage</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <div class="text-bone font-display font-bold text-sm uppercase tracking-[0.15em] mb-4">Contact</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="tel:+33389641484" class="hover:text-accent transition">03 89 64 14 84</a></li>
+          <li><a href="mailto:techni.fermetures@orange.fr" class="hover:text-accent transition">techni.fermetures@orange.fr</a></li>
+          <li class="pt-2">2 Rue des Flandres<br>Village Artisanal Drouot<br>68100 Mulhouse</li>
+          <li class="pt-2 text-bone/60">Du lundi au jeudi 8h15-12h15 / 13h30-17h15<br>Vendredi 8h15-12h15</li>
+          <li class="pt-2 text-bone/60">Zone d'intervention : Mulhouse et ses alentours</li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-bone/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="text-accent italic font-display text-sm md:text-base">« L'énergie est notre avenir, économisons-la ! »</div>
+      <div class="text-xs text-bone/50 flex flex-wrap gap-x-4 gap-y-1"><span>© 2026 Techni Fermetures</span><span>SIRET 415 149 822 000 17</span><span>TVA FR33 415 149 822</span><a href="#" class="hover:text-accent transition">Mentions légales</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:+33389641484" id="stickyCta" class="sticky-cta lg:hidden fixed bottom-4 left-4 right-4 z-40 bg-accent hover:bg-accentdark text-white rounded-2xl px-5 py-3.5 flex items-center justify-between gap-3 font-semibold shadow-2xl transition translate-y-24 opacity-0">
+  <span class="flex items-center gap-2.5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg><span>03 89 64 14 84</span></span>
+  <span class="text-xs font-normal text-white/85 border-l border-white/30 pl-3">Dépannage urgent</span>
+</a>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

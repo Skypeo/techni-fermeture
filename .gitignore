@@ -1,0 +1,12 @@
+# Fichiers système Windows / macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Config locale Claude Code (propre à ta machine)
+.claude/
+
+# Archives locales éventuelles
+_archives/
+*.zip
+*.rar
