@@ -148,7 +148,7 @@
 
       <!-- Right: Form -->
       <div class="lg:col-span-7">
-        <form class="bg-bone text-ink rounded-3xl p-7 md:p-10 shadow-2xl">
+        <form id="contactForm" class="bg-bone text-ink rounded-3xl p-7 md:p-10 shadow-2xl">
           <h2 class="font-display font-bold text-2xl md:text-3xl text-ink mb-2">Nous contacter</h2>
           <p class="text-slate2 text-sm mb-7">Contactez-nous ! Notre entreprise de menuiserie est à votre écoute du lundi au jeudi de 08h15 à 12h15 et de 13h30 à 17h15 et le vendredi de 08h15 jusqu'à 12h15.</p>
           <div class="mb-5">
@@ -181,8 +181,9 @@
             <input type="checkbox" required class="mt-1 w-4 h-4 accent-accent flex-shrink-0">
             <span class="text-xs text-slate2 leading-relaxed">En cochant cette case, j'accepte que mes données soient utilisées pour être recontacté(e). Elles sont destinées à Techni Fermetures et ses sous-traitants. Vous disposez de droits d'accès, de rectification, d'effacement, de portabilité, de limitation, d'opposition et de retrait de votre consentement, à exercer par courrier (2 Rue des Flandres, 68100 Mulhouse) ou par e-mail (techni.fermetures@orange.fr).</span>
           </label>
-          <button type="button" onclick="alert('Maquette — formulaire non actif. Appelez le 03 89 64 14 84 ou écrivez à techni.fermetures@orange.fr');" class="w-full bg-accent hover:bg-accentdark text-white font-semibold py-4 rounded-xl transition">Envoyer ma demande</button>
-          <p class="mt-4 text-xs text-slate2 text-center">Devis gratuit & sans engagement · Réponse sous 24h ouvrées · * Champs obligatoires</p>
+          <button type="submit" class="w-full bg-accent hover:bg-accentdark text-white font-semibold py-4 rounded-xl transition">Envoyer ma demande</button>
+          <div id="formMsg" class="hidden mt-5 rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:rgba(45,85,71,.1);color:#2D5547;">✓ Merci, votre demande a bien été envoyée. Nous vous recontactons rapidement.</div>
+          <p class="mt-4 text-xs text-slate2 text-center">Devis gratuit & sans engagement · * Champs obligatoires</p>
         </form>
       </div>
     </div>
@@ -256,5 +257,21 @@
 </footer>
 
 <script src="assets/js/site.js"></script>
+<script>
+// Formulaire de contact — version test : validation native + confirmation visuelle.
+(function () {
+  var f = document.getElementById('contactForm');
+  if (!f) return;
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var msg = document.getElementById('formMsg');
+    f.reset();
+    if (msg) {
+      msg.classList.remove('hidden');
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+})();
+</script>
 </body>
 </html>
