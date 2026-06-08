@@ -1,6 +1,9 @@
-/* Configuration Tailwind partagée — Techni Fermetures
-   À charger juste après le CDN Tailwind, avant le rendu. */
-tailwind.config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  // Scanne les 13 pages HTML + le JS partagé (classes togglées dynamiquement)
+  content: ['./*.html', './assets/js/*.js'],
+  // Utilitaires ajoutés/retirés par JS — gardés même si peu visibles dans le HTML
+  safelist: ['hidden', 'opacity-0', 'translate-y-24'],
   theme: {
     extend: {
       colors: {
@@ -20,7 +23,8 @@ tailwind.config = {
       boxShadow: {
         'soft': '0 1px 2px rgba(15,20,25,.04), 0 8px 24px rgba(15,20,25,.06)',
         'lift': '0 8px 16px rgba(15,20,25,.06), 0 24px 48px rgba(15,20,25,.10)',
-      }
-    }
-  }
+      },
+    },
+  },
+  plugins: [],
 }

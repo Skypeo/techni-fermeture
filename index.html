@@ -3,59 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Techni Fermetures — Menuiserie & fermetures Mulhouse (68) | Fenêtres, volets, portails depuis 1999</title>
+<title>Techni Fermetures — Menuiserie & fermetures à Mulhouse (68)</title>
 <meta name="description" content="Menuisier-fermetures à Mulhouse depuis 1999. Fenêtres PVC/alu, volets, stores BSO, portails, portes de garage et industrielles. SAV & dépannage en urgence. 5/5 Google.">
 <meta name="theme-color" content="#0F1419">
+<link rel="canonical" href="https://techni-fermeture.vercel.app/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/">
+<meta property="og:url" content="https://techni-fermeture.vercel.app/">
 <meta property="og:title" content="Techni Fermetures — Menuisier-fermetures à Mulhouse depuis 1999">
 <meta property="og:description" content="Vos fenêtres, vos volets, vos portails — confiés à la même équipe depuis 27 ans. Particuliers & professionnels. SAV et dépannage en urgence.">
-<meta property="og:image" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/img/2021-11-24%20%283%29.webp">
+<meta property="og:image" content="https://techni-fermeture.vercel.app/img/2021-11-24%20%283%29.webp">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Techni Fermetures — Menuisier-fermetures à Mulhouse depuis 1999">
 <meta name="twitter:description" content="Vos fenêtres, vos volets, vos portails — confiés à la même équipe depuis 27 ans.">
-<meta name="twitter:image" content="https://template-site-skypeo-two.vercel.app/techni-fermetures/img/2021-11-24%20%283%29.webp">
+<meta name="twitter:image" content="https://techni-fermeture.vercel.app/img/2021-11-24%20%283%29.webp">
 
 <!-- Favicon SVG monogramme TF couleurs logo -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230F1419'/><text x='6' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23C00000'>T</text><text x='15' y='23' font-family='system-ui,sans-serif' font-weight='800' font-size='17' fill='%23FAFAF7'>F</text></svg>">
 
 <!-- Tailwind + Fonts -->
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/tailwind.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        ink: '#0F1419',
-        inksoft: '#1A2128',
-        accent: '#C00000',
-        accentdark: '#9A0000',
-        teal: '#2D5547',
-        bone: '#FAFAF7',
-        stone: '#F4F1EA',
-        slate2: '#5A6470',
-      },
-      fontFamily: {
-        display: ['Manrope', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
-      boxShadow: {
-        'soft': '0 1px 2px rgba(15,20,25,.04), 0 8px 24px rgba(15,20,25,.06)',
-        'lift': '0 8px 16px rgba(15,20,25,.06), 0 24px 48px rgba(15,20,25,.10)',
-      }
-    }
-  }
-}
-</script>
 
 <style>
 html { scroll-behavior: smooth; }
@@ -84,6 +59,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 /* Burger moderne (mêmes règles que assets/css/site.css) :
    2 traits, le bas plus court ; repasse en ink quand la nav devient claire au scroll */
 .nav-burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+@media (min-width: 1024px) { .nav-burger { display: none; } } /* burger masqué en desktop (>=lg) */
 .nav-burger .burger-box { position: relative; display: block; width: 26px; height: 14px; }
 .nav-burger .burger-line { position: absolute; right: 0; height: 2px; border-radius: 2px; background: currentColor; transition: width .3s ease; }
 .nav-burger .burger-line:first-child { top: 0; width: 26px; }
@@ -156,7 +132,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 .sticky-cta { box-shadow: 0 -8px 24px rgba(15,20,25,.18); }
 
 /* Lightbox */
-.lb { transition: opacity .25s ease; }
+.lb { transition: opacity .25s ease; display: flex; align-items: center; justify-content: center; }
 .lb.hidden { display: none; }
 
 /* Counter highlight */
@@ -184,13 +160,13 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  "@id": "https://www.techni-fermetures.com/#business",
+  "@id": "https://techni-fermeture.vercel.app/#business",
   "name": "Techni Fermetures",
   "alternateName": "TECHNI FERMETURES",
   "description": "Menuisier-fermetures à Mulhouse depuis 1999. Pose et SAV de fenêtres, volets, stores BSO, portes d'entrée, portails, portes de garage et portes industrielles pour particuliers et professionnels.",
-  "image": "https://template-site-skypeo-two.vercel.app/techni-fermetures/img/TechnifermLogo.webp",
-  "logo": "https://template-site-skypeo-two.vercel.app/techni-fermetures/img/TechnifermLogo.webp",
-  "url": "https://www.techni-fermetures.com/",
+  "image": "https://techni-fermeture.vercel.app/img/TechnifermLogo.webp",
+  "logo": "https://techni-fermeture.vercel.app/img/TechnifermLogo.webp",
+  "url": "https://techni-fermeture.vercel.app/",
   "telephone": "+33389641484",
   "email": "techni.fermetures@orange.fr",
   "foundingDate": "1999",
@@ -228,7 +204,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 <header id="nav" class="nav fixed top-0 inset-x-0 z-50">
   <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-[72px] md:h-[84px]">
     <a href="#hero" class="flex items-center gap-3">
-      <img src="img/TechnifermLogo.webp" alt="Techni Fermetures Mulhouse" class="nav-logo-mark h-10 md:h-12 w-auto drop-shadow-lg" />
+      <img src="img/TechnifermLogo.webp" alt="Techni Fermetures Mulhouse" width="210" height="151" decoding="async" class="nav-logo-mark h-10 md:h-12 w-auto drop-shadow-lg" />
     </a>
     <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
       <a href="index.html" class="nav-link text-white hover:text-accent transition">Accueil</a>
@@ -270,7 +246,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
     <div class="offcanvas-backdrop absolute inset-0 bg-ink/60 backdrop-blur-sm"></div>
     <aside class="offcanvas-panel absolute top-0 right-0 h-full w-[86%] max-w-sm bg-bone shadow-2xl flex flex-col" role="dialog" aria-modal="true" aria-label="Menu">
       <div class="flex items-center justify-between pl-6 pr-5 h-[72px] border-b border-ink/10 flex-shrink-0">
-        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-9 w-auto" />
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" width="210" height="151" loading="lazy" decoding="async" class="h-9 w-auto" />
         <button class="offcanvas-close w-10 h-10 rounded-full border border-ink/15 flex items-center justify-center text-ink hover:text-accent hover:border-accent/50 transition" aria-label="Fermer le menu"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
       </div>
       <nav class="flex-1 overflow-y-auto px-6 py-5">
@@ -299,7 +275,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 <!-- 1. HERO                                                      -->
 <!-- ============================================================ -->
 <section id="hero" class="relative min-h-[100svh] flex items-center overflow-hidden bg-ink">
-  <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+  <video autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" class="absolute inset-0 w-full h-full object-cover">
     <source src="hero-animation.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay absolute inset-0"></div>
@@ -360,7 +336,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
   </div>
 
   <!-- scroll indicator -->
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-xs flex flex-col items-center gap-2 hidden md:flex">
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-xs flex-col items-center gap-2 hidden md:flex">
     <span class="uppercase tracking-[0.2em]">Scroll</span>
     <div class="w-px h-8 bg-white/40 animate-pulse"></div>
   </div>
@@ -385,7 +361,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
       <!-- PILIER 1 -->
       <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
         <div class="aspect-[16/10] overflow-hidden bg-stone">
-          <img src="img/TechnifermFenetre.png" alt="Baie vitrée alu installée par Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover" />
+          <img src="img/TechnifermFenetre.png" alt="Baie vitrée alu installée par Techni Fermetures" width="595" height="460" loading="lazy" decoding="async" class="svc-img w-full h-full object-cover" />
         </div>
         <div class="p-7 md:p-10">
           <div class="flex items-center gap-3 mb-4">
@@ -409,7 +385,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
       <!-- PILIER 2 -->
       <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
         <div class="aspect-[16/10] overflow-hidden bg-stone">
-          <img src="img/20200806_170427-1920w.webp" alt="Stores BSO brise-soleil orientables Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover" />
+          <img src="img/20200806_170427-1920w.webp" alt="Stores BSO brise-soleil orientables Techni Fermetures" width="1920" height="1440" loading="lazy" decoding="async" class="svc-img w-full h-full object-cover" />
         </div>
         <div class="p-7 md:p-10">
           <div class="flex items-center gap-3 mb-4">
@@ -433,7 +409,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
       <!-- PILIER 3 -->
       <article class="svc-card group relative bg-white border border-ink/8 rounded-3xl overflow-hidden shadow-soft reveal">
         <div class="aspect-[16/10] overflow-hidden bg-stone">
-          <img src="img/TechnifermPortail.png" alt="Portail design installé par Techni Fermetures Mulhouse" loading="lazy" class="svc-img w-full h-full object-cover" />
+          <img src="img/TechnifermPortail.png" alt="Portail design installé par Techni Fermetures Mulhouse" width="595" height="435" loading="lazy" decoding="async" class="svc-img w-full h-full object-cover" />
         </div>
         <div class="p-7 md:p-10">
           <div class="flex items-center gap-3 mb-4">
@@ -458,7 +434,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
       <!-- PILIER 4 -->
       <article class="svc-card group relative bg-ink text-bone border border-ink rounded-3xl overflow-hidden shadow-soft reveal">
         <div class="aspect-[16/10] overflow-hidden bg-ink/40 relative">
-          <img src="img/TechnifermPorteIndustrielle.png" alt="Porte industrielle sectionnelle Techni Fermetures" loading="lazy" class="svc-img w-full h-full object-cover opacity-90" />
+          <img src="img/TechnifermPorteIndustrielle.png" alt="Porte industrielle sectionnelle Techni Fermetures" width="597" height="481" loading="lazy" decoding="async" class="svc-img w-full h-full object-cover opacity-90" />
           <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
         </div>
         <div class="p-7 md:p-10">
@@ -663,7 +639,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 <!-- ============================================================ -->
 <section class="relative py-32 md:py-44 overflow-hidden">
   <div class="absolute inset-0">
-    <img src="img/20220505_143207-1920w.webp" alt="Porte d'entrée alsacienne posée par Techni Fermetures" class="w-full h-full object-cover" loading="lazy">
+    <img src="img/20220505_143207-1920w.webp" alt="Porte d'entrée alsacienne posée par Techni Fermetures" width="1920" height="2560" class="w-full h-full object-cover" loading="lazy" decoding="async">
     <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(15,20,25,.88) 0%, rgba(15,20,25,.72) 50%, rgba(15,20,25,.92) 100%);"></div>
   </div>
 
@@ -692,7 +668,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 <!-- ============================================================ -->
 <section id="pros" class="relative py-24 md:py-32 bg-inksoft text-bone overflow-hidden">
   <div class="absolute top-0 right-0 w-1/2 h-full opacity-30 hidden md:block">
-    <img src="img/2021-11-24.webp" alt="" class="w-full h-full object-cover" loading="lazy" />
+    <img src="img/2021-11-24.webp" alt="" width="1360" height="1020" class="w-full h-full object-cover" loading="lazy" decoding="async" />
     <div class="absolute inset-0 bg-gradient-to-r from-inksoft via-inksoft/85 to-inksoft/30"></div>
   </div>
 
@@ -777,27 +753,27 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
     <!-- Grid masonry-like (CSS columns) -->
     <div id="gallery" class="columns-1 sm:columns-2 lg:columns-3 gap-4 md:gap-5 [&>*]:break-inside-avoid [&>*]:mb-4 md:[&>*]:mb-5">
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="volets" data-src="img/20200806_170427-1920w.webp" data-cap="Stores extérieurs sur façade contemporaine">
-        <img src="img/20200806_170427-1920w.webp" alt="Stores extérieurs sur façade contemporaine" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/20200806_170427-1920w.webp" alt="Stores extérieurs sur façade contemporaine" width="1920" height="1440" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Stores extérieurs · contemporain</div>
       </div>
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portes" data-src="img/2021-11-24%20%285%29.webp" data-cap="Porte d'entrée alu anthracite design">
-        <img src="img/2021-11-24 (5).webp" alt="Porte d'entrée alu anthracite design" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/2021-11-24 (5).webp" alt="Porte d'entrée alu anthracite design" width="765" height="1020" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Porte d'entrée · alu design</div>
       </div>
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portails" data-src="img/2021-11-24%20%283%29.webp" data-cap="Porte de garage + porte d'entrée anthracite">
-        <img src="img/2021-11-24 (3).webp" alt="Porte de garage et porte d'entrée anthracite" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/2021-11-24 (3).webp" alt="Porte de garage et porte d'entrée anthracite" width="791" height="488" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Garage & entrée · ensemble</div>
       </div>
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="fenetres" data-src="img/20211130_144101-1920w.webp" data-cap="Baie vitrée aluminium coulissante">
-        <img src="img/20211130_144101-1920w.webp" alt="Baie vitrée aluminium coulissante" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/20211130_144101-1920w.webp" alt="Baie vitrée aluminium coulissante" width="1920" height="2560" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Baie vitrée · alu coulissante</div>
       </div>
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="portails" data-src="img/2021-11-24%20%284%29.webp" data-cap="Portail anthracite contemporain">
-        <img src="img/2021-11-24 (4).webp" alt="Portail anthracite contemporain" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/2021-11-24 (4).webp" alt="Portail anthracite contemporain" width="765" height="1020" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Portail · anthracite</div>
       </div>
       <div class="g-tile relative rounded-2xl overflow-hidden bg-stone cursor-pointer" data-cat="volets" data-src="img/2021-11-24%20%281%29.webp" data-cap="Stores extérieurs rouges terrasse">
-        <img src="img/2021-11-24 (1).webp" alt="Stores extérieurs rouges sur terrasse" loading="lazy" class="w-full h-auto object-cover" />
+        <img src="img/2021-11-24 (1).webp" alt="Stores extérieurs rouges sur terrasse" width="1360" height="1020" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
         <div class="g-label absolute bottom-3 left-3 right-3 bg-ink/85 text-bone text-xs font-semibold px-3 py-2 rounded-full backdrop-blur-sm">Stores terrasse · sur mesure</div>
       </div>
     </div>
@@ -1117,7 +1093,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
   <div class="max-w-7xl mx-auto px-5 md:px-8 py-14">
     <div class="grid md:grid-cols-12 gap-10">
       <div class="md:col-span-5">
-        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" class="h-12 w-auto mb-5" />
+        <img src="img/TechnifermLogo.webp" alt="Techni Fermetures" width="210" height="151" loading="lazy" decoding="async" class="h-12 w-auto mb-5" />
         <p class="text-sm leading-relaxed max-w-md text-bone/65">
           Travaux de menuiserie intérieure et extérieure · Pose de portes industrielles · Motorisation de menuiseries · Dépannage en urgence · Particuliers & professionnels.
         </p>
@@ -1182,7 +1158,7 @@ h1,h2,h3,h4 { font-family: 'Manrope', system-ui, sans-serif; letter-spacing: -0.
 <!-- ============================================================ -->
 <!-- LIGHTBOX                                                     -->
 <!-- ============================================================ -->
-<div id="lightbox" class="lb hidden fixed inset-0 z-[100] bg-ink/95 flex items-center justify-center p-4 md:p-8" onclick="closeLightbox()">
+<div id="lightbox" class="lb hidden fixed inset-0 z-[100] bg-ink/95 p-4 md:p-8" onclick="closeLightbox()">
   <button class="absolute top-5 right-5 text-bone/90 hover:text-white text-3xl font-light" onclick="closeLightbox()" aria-label="Fermer">×</button>
   <figure class="max-w-5xl max-h-[90vh] flex flex-col items-center">
     <img id="lbImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-xl">

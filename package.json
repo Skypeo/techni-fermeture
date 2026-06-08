@@ -1,0 +1,15 @@
+{
+  "name": "techni-fermetures",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine Techni Fermetures — build CSS Tailwind",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/tailwind-input.css -o ./assets/css/tailwind.css --watch",
+    "optimize:img": "node optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.19"
+  }
+}

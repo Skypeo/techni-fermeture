@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techni-fermeture.vercel.app/sitemap.xml

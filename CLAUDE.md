@@ -10,9 +10,20 @@ Objectif : transformer une **maquette one page** (refonte validée par le client
 - ⏳ **Restes éventuels** : page Mentions légales / Vie privée / Cookies (liens présents, pages à créer si besoin) ; formulaire de contact à brancher (back-end) ; remplacer la photo « aluminium » de `fenetres.html` si une meilleure image est fournie.
 
 ## Stack technique
-HTML statique + **Tailwind CSS (CDN)** + polices Inter/Manrope. Pas de framework, pas de build. Hébergeable partout (Vercel, OVH…).
+HTML statique + **Tailwind CSS compilé** (CSS statique minifié, **plus de CDN**) + polices Inter/Manrope. Pas de framework JS. Hébergeable partout (Vercel, OVH…).
 
-## Design system (défini dans assets/js/tailwind-config.js + assets/css/site.css)
+### Build CSS (Tailwind)
+- Config : `tailwind.config.js` (couleurs/polices/ombres du design system), entrée `assets/css/tailwind-input.css`, sortie **`assets/css/tailwind.css`** (minifié, ~25 Ko / ~5,6 Ko gzip).
+- Régénérer après ajout de **nouvelles classes Tailwind** dans le HTML/JS : `npm install` (1re fois) puis **`npm run build:css`** (ou `npm run watch:css` en dev). Le scan couvre `./*.html` + `./assets/js/*.js`. Safelist : `hidden`, `opacity-0`, `translate-y-24` (classes togglées en JS).
+- **`assets/css/tailwind.css` est versionné** (le site statique le sert directement) ; `node_modules/` est ignoré.
+- ⚠️ Si une classe n'apparaît plus après build → vérifier qu'elle est bien présente dans un fichier scanné (sinon purge). `site.css` (CSS pur, custom) est chargé **après** `tailwind.css`.
+
+### Optimisation des images
+- Images recompressées **en place** (script `optimize-images.mjs`, dépend de `sharp`) : côté long plafonné à **1920px en préservant le ratio** (donc les `width`/`height` du HTML restent valides → pas de modif HTML, CLS préservé), JPG mozjpeg q80, PNG palette q80, WebP q80, métadonnées strippées.
+- Résultat : `img/` **52 → 30 Mo**, vidéo hero `hero-animation.mp4` **8,1 → 0,93 Mo** (H.264 CRF 27, sans audio, faststart). Poster vidéo : `img/hero-poster.jpg`.
+- Re-lancer après ajout de **nouvelles** images : `npm run optimize:img` (ne ré-optimiser tout le lot que si nécessaire — la recompression d'images déjà traitées entraîne une légère perte).
+
+## Design system (couleurs/polices/ombres dans tailwind.config.js + styles custom dans assets/css/site.css)
 - Couleurs : `ink` #0F1419, `inksoft` #1A2128, `accent` #C00000 (rouge), `teal` #2D5547, `bone` #FAFAF7, `stone` #F4F1EA, `slate2` #5A6470
 - Titres **Manrope**, texte **Inter**. Coins arrondis, ombres `soft`/`lift`, animations `.reveal` au scroll.
 
@@ -20,8 +31,10 @@ HTML statique + **Tailwind CSS (CDN)** + polices Inter/Manrope. Pas de framework
 - `index.html` — accueil (maquette validée, allégée, **hero vidéo `hero-animation.mp4` conservée**)
 - Pages produit : `fenetres.html`, `volets-roulants.html`, `portes-d-entree.html`, `stores-bso.html`, `portails.html`, `portes-de-garage.html`, `portes-industrielles.html`, `motorisations.html`, `sav-depannage.html`
 - `notre-entreprise.html`, `realisations.html`, `contact.html`
-- `assets/css/site.css`, `assets/js/site.js`, `assets/js/tailwind-config.js` — design system partagé par toutes les pages
+- `assets/css/tailwind.css` (CSS Tailwind compilé, versionné), `assets/css/site.css` (styles custom), `assets/js/site.js` — partagés par toutes les pages
+- `tailwind.config.js`, `assets/css/tailwind-input.css`, `package.json` — chaîne de build CSS
 - `img/` — logo, visuels produits, photos ; `content/` — texte source de l'ancien site (un `.md` par page)
+- SEO : `robots.txt`, `sitemap.xml` à la racine ; URLs absolues sur l'URL provisoire `https://techni-fermeture.vercel.app/`
 
 ## Gabarit page produit (réutilisable)
 Header (nav-solid, dropdown services) → hero intérieur (image + fil d'ariane + H1 + CTA) → section 1 (clair) → section 2 (sombre) → bloc 4 atouts (stone) → section 3 (clair) → bande CTA (inksoft) → footer → sticky CTA mobile.

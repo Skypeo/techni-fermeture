@@ -10,3 +10,6 @@ desktop.ini
 _archives/
 *.zip
 *.rar
+
+# Dépendances de build (Tailwind) — le CSS compilé assets/css/tailwind.css EST versionné
+node_modules/
